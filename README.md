@@ -1,5 +1,4 @@
 [![stars](https://img.shields.io/github/stars/BGI-Qingdao/4D-BioReconX?logo=GitHub&color=yellow)](https://img.shields.io/github/stars/BGI-Qingdao/4D-BioReconX) 
-[![downloads](https://static.pepy.tech/personalized-badge/4d-bioreconx?period=total&units=international_system&left_color=grey&right_color=blue&left_text=downloads)](https://pepy.tech/project/4d-bioreconx)
 [![docs](https://img.shields.io/static/v1?label=docs&message=4d-bioreconx&color=green)](https://4D-bioreconx.readthedocs.io/en/latest/index.html)
 
 ## **4D-BioReconX**: a bioinformatic framework for reconstructing 4D spatial transcriptomics atlas and spatiotemporal analyses+
@@ -8,7 +7,7 @@
 [Quick start](https://4d-bioreconx.readthedocs.io/en/latest/Tutorials/SquareBin_Clustering.html) - 
 [Documentation](https://4d-bioreconx.readthedocs.io/en/latest/index.html)
 
-<img src="https://github.com/BGI-Qingdao/4D-BioReconX/blob/main/docs/source/_static/4D-BioReconX_workflow_v1.0.0.png" width="80%" height="100%">
+<img src="https://github.com/BGI-Qingdao/4D-BioReconX/blob/main/docs/source/_static/4D-BioReconX_workflow_v1.0.0.png" width="100%" height="100%">
 
 [comment]: <> (![4D-BioReconX]&#40;./docs/source/_static/4D-BioReconX.PNG&#41;)
 
