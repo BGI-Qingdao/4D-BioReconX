@@ -6,9 +6,6 @@
 
 import argparse
 import sys
-#2023-07-21:
-sys.path.append('/dellfsqd2/ST_OCEAN/USER/liyao1/03.planarian/pcg_ap_pattern')
-#sys.path.append('/dellfsqd2/ST_OCEAN/USER/liyao1/scripts/pcg_ap_pattern')
 import pandas as pd
 import numpy as np
 import hdbscan
@@ -20,7 +17,7 @@ import seaborn as sns
 import os
 from itertools import chain
 from hdbscan import flat
-from stereo_pcg.util import read_list, read_expr
+from util import read_list, read_expr
 from scipy.ndimage import gaussian_filter1d
 from sklearn.decomposition import PCA
 import scipy.stats
@@ -524,9 +521,9 @@ def main():
     parser.add_argument('-ms', '--min_sample', metavar='minSampleSize', default=0, type=int, help='minimum sample size of HDBSCAN. default is 0. when all four param are set to 0, HDBSCAN will run on default setting.')
     parser.add_argument('-e', '--epsilon', metavar='epsilon', default=0, type=float, help='epsilon of HDBSCAN. default is 0. when all four param are set to 0, HDBSCAN will run on default setting.')
     # check pcg stats
-    parser.add_argument('-p', '--pcg', metavar='pcgList', type=str, default='/dellfsqd2/ST_OCEAN/USER/liyao1/scripts/pcg_ap_pattern/input_data/gene_class.txt', help='path to pcg list')
-    parser.add_argument('--total', metavar='totalPCGList', type=str, default='/dellfsqd2/ST_OCEAN/USER/liyao1/scripts/pcg_ap_pattern/input_data/unique_all_pcg_smes.txt', help='path to reddien pcg list')
-    parser.add_argument('-y', '--symbol', metavar='geneSymbol', type=str, default='/dellfsqd2/ST_OCEAN/USER/liyao1/scripts/pcg_ap_pattern/input_data/pcg_symbol_smes.txt', help='path to symbol-gene list')
+    parser.add_argument('-p', '--pcg', metavar='pcgList', type=str, default='gene_class.txt', help='path to pcg list')
+    parser.add_argument('--total', metavar='totalPCGList', type=str, default='unique_all_pcg_smes.txt', help='path to reddien pcg list')
+    parser.add_argument('-y', '--symbol', metavar='geneSymbol', type=str, default='pcg_symbol_smes.txt', help='path to symbol-gene list')
     parser.add_argument('-o', '--order', metavar='clusterOrderList', nargs="*", type=int, help='order of clusters to show in heatmap')
     # re-grouping genes
     parser.add_argument('-c', '--cutoff', metavar='cutoff', type=float, default=0.9, help='[float] cutoff of a strong pearson correlation coefficient value')

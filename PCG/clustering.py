@@ -9,12 +9,10 @@ from sklearn.linear_model import LogisticRegression
 import hdbscan
 import sys
 
-# 2023-07-21:
-sys.path.append('/dellfsqd2/ST_OCEAN/USER/liyao1/03.planarian/pcg_ap_pattern')
-from stereo_pcg.pcg_pattern import *
+from pcg_pattern import *
 from scipy.ndimage import gaussian_filter1d
 import numpy as np
-from stereo_pcg.plot_heatmap import plot_heatmap
+from plot_heatmap import plot_heatmap
 import scanpy as sc
 from hdbscan import flat
 
