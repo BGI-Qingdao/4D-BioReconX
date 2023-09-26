@@ -5,7 +5,7 @@ Positional Controled Genes (PCGs) are xxxx. Here we offer three major ways to xx
 * [Clustering](#clustering)
 * [PCA](#pca)
 * [PCG Mining](#pcg-mining)
-<img src="PCG_analysis_workflow.png">
+<img src="PCG_analysis_workflow.png" width=400 height=600>
 ***
 
 ## PCG Gene Profiling
