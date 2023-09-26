@@ -8,7 +8,7 @@
 [Quick start](https://4d-bioreconx.readthedocs.io/en/latest/Tutorials/SquareBin_Clustering.html) - 
 [Documentation](https://4d-bioreconx.readthedocs.io/en/latest/index.html)
 
-<img src="https://github.com/STOmics/stereopy/blob/main/docs/source/_static/4D-BioReconX_workflow_v1.0.0.png" width="60%" height="80%">
+<img src="https://github.com/BGI-Qingdao/4D-BioReconX/blob/main/docs/source/_static/4D-BioReconX_workflow_v1.0.0.png" width="60%" height="80%">
 
 [comment]: <> (![4D-BioReconX]&#40;./docs/source/_static/4D-BioReconX.PNG&#41;)
 
