@@ -1,14 +1,12 @@
 [![stars](https://img.shields.io/github/stars/BGI-Qingdao/4D-BioReconX?logo=GitHub&color=yellow)](https://img.shields.io/github/stars/BGI-Qingdao/4D-BioReconX) 
-[![pypi](https://img.shields.io/pypi/v/4D-BioReconX)](https://pypi.org/project/4D-BioReconX/)
 [![downloads](https://static.pepy.tech/personalized-badge/4D-BioReconX?period=total&units=international_system&left_color=grey&right_color=blue&left_text=downloads)](https://pepy.tech/project/4D-BioReconX)
 [![docs](https://img.shields.io/static/v1?label=docs&message=stereopy&color=green)](https://4D-bioreconx.readthedocs.io/en/latest/index.html)
 
-## **Stereopy**: Spatial Transcriptomics Analysis in Python
+## **4D-BioReconX**: a bioinformatic framework for reconstructing 4D spatial transcriptomics atlas and spatiotemporal analyses+
 
-[Installation](https://stereopy.readthedocs.io/en/latest/content/00_Installation.html) - 
-[Quick start](https://stereopy.readthedocs.io/en/latest/Tutorials/SquareBin_Clustering.html) - 
-[Documentation](https://stereopy.readthedocs.io/en/latest/index.html) - 
-[API](https://stereopy.readthedocs.io/en/latest/content/03_API.html)
+[Installation](https://4d-bioreconx.readthedocs.io/en/latest/content/00_Installation.html) - 
+[Quick start](https://4d-bioreconx.readthedocs.io/en/latest/Tutorials/SquareBin_Clustering.html) - 
+[Documentation](https://4d-bioreconx.readthedocs.io/en/latest/index.html) - 
 
 <img src="https://github.com/STOmics/stereopy/blob/main/docs/source/_static/4D-BioReconX_workflow_v1.0.0.png" width="60%" height="80%">
 
