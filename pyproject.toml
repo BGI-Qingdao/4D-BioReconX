@@ -1,30 +1,5 @@
 [build-system]
-requires = ["setuptools"]
+requires = [
+    "setuptools>=61.0.0"
+]
 build-backend = "setuptools.build_meta"
-
-[project]
-name = "4D-BioReconX"
-version = "1.0.0"
-authors = [
-    {name = "xumengyang", email = "xumengyang@genomics.cn"},
-]
-description = "A scalable and versatile framework designed to construct a comprehensive four-dimensional (4D) spatial transcriptomics atlas of whole animals at single-cell resolution."
-readme = "README.md"
-requires-python = ">=3.7"
-keywords = ["stereo-seq"]
-license = {text = "GPL-3.0+"}
-classifiers=[
-    "Programming Language :: Python :: 3.9",
-    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
-    "Operating System :: OS Independent",
-]
-dependencies = [
-    'numpy>=1.22.4',
-    'scipy>=1.9.0',
-    'pandas>=1.4.3',
-    'matplotlib>=3.6.2',
-    'opencv-python>=4.6.0.66',
-    'scikit-image>=0.19.2',
-    'alphashape>=1.3.1',
-    'anndata>=0.8.0',
-]
