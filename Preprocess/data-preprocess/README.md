@@ -10,8 +10,11 @@ Image files, which usually in TIFF format, generated during the stereo-seq libra
 
 ## GEM and image preprocessing
 
+We provide flexible toolkit to process GEM file and ssDNA file.
+
+### main usage
 ```
-./GEM3D_toolkit.py
+./GEM3D_toolkit.py -h
 
 Usage : GEM_toolkit.py action [options]
 
@@ -54,3 +57,7 @@ Actions:
     -h/--help               show this short usage
 
 ```
+
+### Action usage
+
+if your need action ```xxx```'s usage, please try ```./GEM3D_toolkit.py  xxx -h```
