@@ -7,3 +7,50 @@ Image files, which usually in TIFF format, generated during the stereo-seq libra
 
 > [!NOTE]
 > All data generated in this study were deposited at CNGB Nucleotide Sequence Archive (accession code: STT0000028). Processed data can be interactively explored from our PRISTA4D database (https://db.cngb.org/stomics/prista4d; https://www.bgiocean.com/planarian). 
+
+## GEM and image preprocessing
+
+```
+./GEM3D_toolkit.py
+
+Usage : GEM_toolkit.py action [options]
+
+Actions:
+
+---------------------------------------------------------------------
+
+ Format coverting tools:
+    gem_to_h5ad                   convert GEM into h5ad by a certain binsize.
+    gemc_to_h5ad                  convert GEMC into h5ad.
+
+ Affine tools:
+    affine_gem                    modify the 2D coordinate in GEM(C) by user-defined affine matrix.
+    affine_h5ad                   modify the 2D coordinate in GEM(C) by user-defined affine matrix.
+    affine_ssdna                  affine the ssdna image by user-defined affine matrix.
+    affine_txt                    affine txt like cell.mask by user-defined affine matrix.
+    apply_registration        	  use registration result(with/without ROI) to update ssdna/mask/gem ...
+    apply_cells                   add cells column to gem based on registered mask file.
+
+ Region of interest(ROI) tools:
+    chop_image                    chop region of interests from whole image.
+    chop_gem                      chop region of interests from GEM(C).
+
+ Mask tools:
+    mask_gem                      mask GEM(C) by mask image.
+    mask_h5ad                     mask h5ad data by mask image.
+
+ Visualization tools:
+    draw_heatmap                  draw heatmap of expression counts in bin1 resolution with/without cellbin and with/without ssDNA.
+    image_blend                   merge image(like heatmap/annotation image) with ssDNA and border image
+
+ Other tools:
+    chop_paste                    chop or paste ssDNA image. This tools is useful for ultra-large ssDNA image.
+    trakEM2_to_affine             covert trakEM2_matrix to standart affine matrix.
+    split_gem                     split gem by x or y coordinate.
+    merge_h5ad                    merge files of h5ad.
+    gem_xy                        get xmin ymin of gem
+
+    -----------------------------------------------------------------
+    -h/--help               show this short usage
+
+```
