@@ -54,6 +54,21 @@ Workflow
     :align: center
 
 
+.. toctree::
+    :titlesonly:
+    :maxdepth: 3
+    :hidden:
+
+    content/00_Installation
+    content/01_Usage_principles
+    Tutorials/index
+    content/03_API
+    content/04_Community
+    content/05_Contributing
+    content/06_Release_notes
+    content/07_References
+
+
 .. |docs| image:: https://img.shields.io/static/v1?label=docs&message=4d-bioreconx&color=green
     :target: https://4d-bioreconx.readthedocs.io/en/latest/index.html
     :alt: docs
