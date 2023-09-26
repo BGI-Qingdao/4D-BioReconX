@@ -60,13 +60,10 @@ Workflow
     :hidden:
 
     content/00_Installation
-    content/01_Usage_principles
+    content/01_Basic_Usage
     Tutorials/index
     content/03_API
-    content/04_Community
-    content/05_Contributing
-    content/06_Release_notes
-    content/07_References
+    content/04_References
 
 
 .. |docs| image:: https://img.shields.io/static/v1?label=docs&message=4d-bioreconx&color=green
