@@ -1,0 +1,128 @@
+CellProfiler Pipeline: http://www.cellprofiler.org
+Version:5
+DateRevision:421
+GitHash:
+ModuleCount:7
+HasImagePlaneDetails:False
+
+IdentifyPrimaryObjects:[module_num:1|svn_version:'Unknown'|variable_revision_number:15|show_window:True|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:ssDNA
+    Name the primary objects to be identified:Nuclei
+    Typical diameter of objects, in pixel units (Min,Max):1,40
+    Discard objects outside the diameter range?:Yes
+    Discard objects touching the border of the image?:Yes
+    Method to distinguish clumped objects:Intensity
+    Method to draw dividing lines between clumped objects:Intensity
+    Size of smoothing filter:10
+    Suppress local maxima that are closer than this minimum allowed distance:7.0
+    Speed up by using lower-resolution image to find local maxima?:Yes
+    Fill holes in identified objects?:After both thresholding and declumping
+    Automatically calculate size of smoothing filter for declumping?:Yes
+    Automatically calculate minimum allowed distance between local maxima?:Yes
+    Handling of objects if excessive number of objects identified:Continue
+    Maximum number of objects:500
+    Use advanced settings?:No
+    Threshold setting version:12
+    Threshold strategy:Global
+    Thresholding method:Minimum Cross-Entropy
+    Threshold smoothing scale:1.3488
+    Threshold correction factor:1.0
+    Lower and upper bounds on threshold:0.0,1.0
+    Manual threshold:0.0
+    Select the measurement to threshold with:None
+    Two-class or three-class thresholding?:Two classes
+    Log transform before thresholding?:No
+    Assign pixels in the middle intensity class to the foreground or the background?:Foreground
+    Size of adaptive window:50
+    Lower outlier fraction:0.05
+    Upper outlier fraction:0.05
+    Averaging method:Mean
+    Variance method:Standard deviation
+    # of deviations:2.0
+    Thresholding method:Minimum Cross-Entropy
+
+MeasureObjectNeighbors:[module_num:2|svn_version:'Unknown'|variable_revision_number:3|show_window:True|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select objects to measure:Nuclei
+    Select neighboring objects to measure:Nuclei
+    Method to determine neighbors:Within a specified distance
+    Neighbor distance:5
+    Consider objects discarded for touching image border?:Yes
+    Retain the image of objects colored by numbers of neighbors?:No
+    Name the output image:ObjectNeighborCount
+    Select colormap:Blues
+    Retain the image of objects colored by percent of touching pixels?:No
+    Name the output image:PercentTouching
+    Select colormap:Oranges
+
+FilterObjects:[module_num:3|svn_version:'Unknown'|variable_revision_number:9|show_window:True|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the objects to filter:Nuclei
+    Name the output objects:FilterNuclei
+    Select the filtering mode:Measurements
+    Select the filtering method:Limits
+    Select the objects that contain the filtered objects:None
+    Select the location of the rules or classifier file:Elsewhere...|
+    Rules or classifier file name:rules.txt
+    Class number:1
+    Measurement count:1
+    Additional object count:0
+    Assign overlapping child to:Both parents
+    Keep removed objects as a seperate set?:No
+    Name the objects removed by the filter:RemovedObjects
+    Select the measurement to filter by:Neighbors_NumberOfNeighbors_5
+    Filter using a minimum measurement value?:Yes
+    Minimum value:10
+    Filter using a maximum measurement value?:No
+    Maximum value:1.0
+
+IdentifySecondaryObjects:[module_num:4|svn_version:'Unknown'|variable_revision_number:10|show_window:True|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input objects:FilterNuclei
+    Name the objects to be identified:Cell
+    Select the method to identify the secondary objects:Watershed - Gradient
+    Select the input image:ssDNA
+    Number of pixels by which to expand the primary objects:10
+    Regularization factor:0.05
+    Discard secondary objects touching the border of the image?:No
+    Discard the associated primary objects?:No
+    Name the new primary objects:FilteredNuclei
+    Fill holes in identified objects?:Yes
+    Threshold setting version:12
+    Threshold strategy:Global
+    Thresholding method:Minimum Cross-Entropy
+    Threshold smoothing scale:0.0
+    Threshold correction factor:1.0
+    Lower and upper bounds on threshold:0.0,1.0
+    Manual threshold:0.0
+    Select the measurement to threshold with:None
+    Two-class or three-class thresholding?:Two classes
+    Log transform before thresholding?:No
+    Assign pixels in the middle intensity class to the foreground or the background?:Foreground
+    Size of adaptive window:50
+    Lower outlier fraction:0.05
+    Upper outlier fraction:0.05
+    Averaging method:Mean
+    Variance method:Standard deviation
+    # of deviations:2.0
+    Thresholding method:Minimum Cross-Entropy
+
+MeasureObjectSizeShape:[module_num:5|svn_version:'Unknown'|variable_revision_number:3|show_window:True|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select object sets to measure:Cell
+    Calculate the Zernike features?:No
+    Calculate the advanced features?:No
+
+IdentifyTertiaryObjects:[module_num:6|svn_version:'Unknown'|variable_revision_number:3|show_window:True|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the larger identified objects:Cell
+    Select the smaller identified objects:FilterNuclei
+    Name the tertiary objects to be identified:Cytoplasm
+    Shrink smaller object prior to subtraction?:Yes
+
+OverlayOutlines:[module_num:7|svn_version:'Unknown'|variable_revision_number:4|show_window:True|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Display outlines on a blank image?:No
+    Select image on which to display outlines:ssDNA
+    Name the output image:CellOutlines
+    Outline display mode:Color
+    Select method to determine brightness of outlines:Max of image
+    How to outline:Inner
+    Select outline color:Red
+    Select objects to display:Cell
+
+
