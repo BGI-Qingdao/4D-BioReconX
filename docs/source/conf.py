@@ -96,7 +96,6 @@ html_css_files = [
 #     ntbk.save(filename)
 
 nbsphinx_thumbnails = {
-    "Tutorials/SquareBin_Clustering": "_static/squareBin_clustering.png",
 }
 
 
