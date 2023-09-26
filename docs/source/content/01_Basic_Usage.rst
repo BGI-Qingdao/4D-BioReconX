@@ -1,4 +1,4 @@
-Usage Principles 
+Basic Usage 
 ================
 
 Import Stereopy as:
