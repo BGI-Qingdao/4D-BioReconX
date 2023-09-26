@@ -452,6 +452,51 @@ def save_cluster_gene(cluster_genes, fn, save):
             f.write('%s,%s\n' % (key, ",".join(map(str, value))))
 
 
+# 2023-09-26
+def update_recall_labels(labels, recall, total_genes):
+    '''update cluster labels for all the previous -1 cluster genes'''
+    for gene in recall['gene']:
+        gindex = total_genes.index(gene)
+        labels[gindex] = recall[recall.gene==gene]['cluster']
+    return labels
+
+
+def update_sorted_labels(corder:list, new_labels:np.ndarray)->np.ndarray:
+    """update cluster labels by peak value order"""
+    sorted_labels = new_labels.copy()
+    for i, l in enumerate(corder):
+        sorted_labels[sorted_labels==l] = i+999
+    sorted_labels = sorted_labels - 999
+    print(f'max cluster number is {sorted_labels.max()}')
+    print(f'min cluster number is {sorted_labels.min()}')
+    return sorted_labels
+
+
+def sort_bin(df: pd.DataFrame):
+    """
+    sort data by binID
+    :param df:
+    :return:
+    """
+    og_index = list(df.index)
+    new_index = sorted(og_index, key=lambda x: int(float(x.strip('bin'))))
+    df = df.reindex(new_index)
+    return df
+
+
+def draw_umap(gene_mat, sorted_labels, non_cluster, save, name, order: list):
+    sub_order = order.copy()
+    sub_order.remove(non_cluster)
+    X = gene_mat[sorted_labels != non_cluster]
+    mapper = umap.UMAP().fit(X)
+    umap.plot.points(mapper, labels=sorted_labels[sorted_labels != non_cluster])
+    plt.legend(sub_order, ncol=2, bbox_to_anchor=(1, 1), loc='upper left')
+    plt.tight_layout()
+    plt.savefig(os.path.join(save, f"{name}_umap.pdf"), format='pdf')
+    plt.close()
+# 2023-09-26 end
+
+
 def main():
     example_text = """example:
       --- flat clustering

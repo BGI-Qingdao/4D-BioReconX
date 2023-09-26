@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # @Date: Created on 28 Aug 2023 09:19
 # @Author: Yao LI
-# @File: sex_planarian/clustering.py
+# @File: clustering.py
 
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
@@ -14,39 +14,14 @@ sys.path.append('/dellfsqd2/ST_OCEAN/USER/liyao1/03.planarian/pcg_ap_pattern')
 from stereo_pcg.pcg_pattern import *
 from scipy.ndimage import gaussian_filter1d
 import numpy as np
-from update_labels import *
 from stereo_pcg.plot_heatmap import plot_heatmap
 import scanpy as sc
 from hdbscan import flat
 
 
-def draw_umap(gene_mat, sorted_labels, non_cluster, save, name, order: list):
-    sub_order = order.copy()
-    sub_order.remove(non_cluster)
-    X = gene_mat[sorted_labels != non_cluster]
-    mapper = umap.UMAP().fit(X)
-    umap.plot.points(mapper, labels=sorted_labels[sorted_labels != non_cluster])
-    plt.legend(sub_order, ncol=2, bbox_to_anchor=(1, 1), loc='upper left')
-    plt.tight_layout()
-    plt.savefig(os.path.join(save, f"{name}_umap.pdf"), format='pdf')
-    plt.close()
-
 '''
 python clustering.py scaled_cell_norm.h5ad wt.h5ad
 '''
-
-
-def sort_bin(df: pd.DataFrame):
-    """
-    sort data by binID
-    :param df:
-    :return:
-    """
-    og_index = list(df.index)
-    new_index = sorted(og_index, key=lambda x: int(float(x.strip('bin'))))
-    df = df.reindex(new_index)
-    return df
-
 # load total genes
 scaled_fn = sys.argv[1]
 # data = pd.read_csv(scaled_fn)
