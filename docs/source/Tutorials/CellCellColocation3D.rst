@@ -3,13 +3,13 @@
 CellCellColocation3D Pipeline
 ========================================
 
-.. note:: 
 Calculate cell-cell colocation array by KL in 3D coordinate and then generate its MST.
 
-
 Usage
-========================================
-CellColocation.py 
+--------------------------------------------------------------------------------
+
+.. code-block:: python3  
+python3 CellColocation.py 
 
 ================== ===========================================================
 optional arguments                description
@@ -25,10 +25,11 @@ optional arguments                description
 -a                 annotation key in obs, default 'annotation'
 ================== ===========================================================  
 
-  Please set -b based on your coordinate system !!!
-                                      
-  Note: -b must be integer
+Please set -b based on your coordinate system !!!
+
+Note: -b must be an integer
 
 Reference
-========================================
+--------------------------------------------------------------------------------
+
 Wei, R., He, S., Bai, S. et al. Spatial charting of single-cell transcriptomes in tissues. Nat Biotechnol 40, 1190–1199 (2022). https://doi.org/10.1038/s41587-022-01233-1
