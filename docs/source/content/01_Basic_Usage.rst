@@ -12,7 +12,7 @@ Workflow
 Usage
 --------------
 
-Follow the instruction for each module of interest 
+Follow the instructions for each module of interest 
 
 
 4D-BioReconX
