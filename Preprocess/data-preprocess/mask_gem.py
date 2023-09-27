@@ -2,8 +2,8 @@ import sys
 import time
 import getopt
 from skimage import io as skio
-from gemtk.slice_dataframe import slice_dataframe
-from gemtk.save_miscdf import *
+from slice_dataframe import slice_dataframe
+from save_miscdf import *
 
 from PIL import ImageFile
 from PIL import Image

@@ -2,8 +2,8 @@ import sys
 import time
 import getopt
 
-from gemtk.slice_dataframe import slice_dataframe
-from gemtk.save_miscdf import *
+from slice_dataframe import slice_dataframe
+from save_miscdf import *
 
 def chopgems(roi_json,prefix,binsize):
     create_a_folder(prefix)
