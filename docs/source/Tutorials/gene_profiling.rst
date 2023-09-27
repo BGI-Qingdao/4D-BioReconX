@@ -13,6 +13,11 @@ Usage
 ========================================
 usage: AP_Profiling [-h] -i INPUT -o OUTPUT [-m MIN_BIN] [-n NUM_HVG] [-b BIN_NUM]
   
+.. image:: ../_static/gene_profiling_workflow.png
+    :alt: Title figure
+    :width: 700px
+    :align: center
+
 
 Create AP Profiling for genes.
 
