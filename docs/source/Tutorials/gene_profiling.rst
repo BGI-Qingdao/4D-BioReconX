@@ -3,14 +3,14 @@
 PCG Gene Profiling Pipeline
 ========================================
 
-.. note:: 
 The basic idea here is converting 3D data into 1D pseudoBulk data.To achieve this, \
 we choose a body axis ( an idx of spatial coordinate ) and group data into equal-width bins.\
 Cells of each bin then merge into one meta cell.
 
 
 Usage
-========================================
+---------------------------------
+
 usage: AP_Profiling [-h] -i INPUT -o OUTPUT [-m MIN_BIN] [-n NUM_HVG] [-b BIN_NUM]
   
 .. image:: ../_static/gene_profiling_workflow.png
@@ -19,10 +19,10 @@ usage: AP_Profiling [-h] -i INPUT -o OUTPUT [-m MIN_BIN] [-n NUM_HVG] [-b BIN_NU
     :align: center
 
 
-Create AP Profiling for genes.
+**Create AP Profiling for genes.**
 
 ================================= ===========================================================
-optional arguments                description
+arguments                         description
 ================================= ===========================================================
 -h, --help                        show this help message and exit
 -i INPUT, --input INPUT           the input adata, Notice: we expect raw count matrix!!!
