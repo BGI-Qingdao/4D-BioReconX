@@ -3,11 +3,11 @@ Tutorials
 This section consists of various cases which will make you familiar with the process of 
 main analyses.
 
-
 .. card:: WACCA
     :octicon:`book;1em;`
     :link: Preprocess
     :link-type: doc
+
     This section contains a Whole-Animal reconstruction pipeline using 2D multimodal registration, Cell segmentation, Clustering, and Annotation to integrate the series of Stereo-seq slices and obtain comprehensive 3D anatomic and molecular profiles.
 
 .. card:: SPC analysis
