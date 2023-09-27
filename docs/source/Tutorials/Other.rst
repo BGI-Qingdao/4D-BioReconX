@@ -9,4 +9,4 @@ This section introduces various methods to meet user-defined requirements, such 
 	:maxdepth: 1
 
  assign_blastema_region
- body_strengthening
+ body_straightening
