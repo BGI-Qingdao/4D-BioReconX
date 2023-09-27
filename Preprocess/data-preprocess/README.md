@@ -60,3 +60,14 @@ Actions:
 ### Action usage
 
 if your need action ```xxx```'s usage, please try ```./GEM3D_toolkit.py  xxx -h```
+
+for example:
+```
+ ./GEM3D_toolkit.py mask_gem -h
+
+Usage : GEM_toolkit.py maskgem -i <input.gem> \
+                               -m <mask.png>  \
+                               -o <output-folder> \
+                               -x [default None, xmin] \
+                               -y [default None, ymin]
+```
