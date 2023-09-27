@@ -6,7 +6,7 @@ based on both transcriptional similarity and spatial proximity, as well as downs
 
 
 .. toctree::
-	:caption: SPC
+	:caption: SPC analysis
 	:hidden: 
 	:maxdepth: 1
 	
