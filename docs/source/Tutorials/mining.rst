@@ -18,7 +18,7 @@ adata = sc.read_h5ad(file_name)
 df = adata.to_df()
 target_genes = list(df.columns)  # or assigned by users
 with open('known_pcgs.txt', 'r') as f:
-    known_pcgs = f.read().splitlines()
+known_pcgs = f.read().splitlines()
 
 Finding out more polarity-related genes
 ---------------------------------
@@ -26,12 +26,12 @@ Finding out more polarity-related genes
 .. code-block:: python3
 df_data = {'gene':[], 'pcg':[], 'scc':[]}
 for gene in target_genes:
-    for pcg in known_pcgs:
-        if pcg in df.columns and pcg != gene:
-            df_data['gene'].append(gene)
-            df_data['pcg'].append(pcg)
-            scc = scipy.stats.spearmanr(df[gene], df[pcg]).correlation
-            df_data['scc'].append(scc)
+for pcg in known_pcgs:
+if pcg in df.columns and pcg != gene:
+df_data['gene'].append(gene)
+df_data['pcg'].append(pcg)
+scc = scipy.stats.spearmanr(df[gene], df[pcg]).correlation
+df_data['scc'].append(scc)
 
 .. code-block:: python3
 results = pd.DataFrame(df_data)
