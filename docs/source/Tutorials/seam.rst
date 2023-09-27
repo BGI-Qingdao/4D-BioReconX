@@ -4,19 +4,25 @@ Handle gem files for downstream analysis
 ========================================
 
 .. note:: 
-seam pipeline aim to align and merge serial slices (each slice in a H5AD file) into one 3D atlas ( one H5AD file with aligned 3D coornidates)
-![image](https://github.com/BGI-Qingdao/4D-BioReconX/assets/8720584/8be45bf8-0c05-44f7-a4d8-2da4bf3e00d1)
+seam pipeline aims to align and merge serial slices (each slice in a H5AD file) into one 3D atlas ( one H5AD file with aligned 3D coordinates)
+
+.. image:: ../_static/seam_workflow.png
+    :alt: Title figure
+    :width: 700px
+    :align: center
 
 Workflow
 ======================================
-seam pipeline constain three main steps:
+seam pipeline contains three main steps:
 
 * prepare alignment images
 * align all images
 * apply alignment to raw data and merge
 
-![image](https://github.com/BGI-Qingdao/4D-BioReconX/assets/8720584/95d2ccf1-3d16-47f9-bcf7-8d0d4c9de6fd)
- 
+.. image:: ../_static/seam_3d.png
+    :alt: Title figure
+    :width: 700px
+    :align: center 
 
 
 Usages
