@@ -8,11 +8,12 @@ Calculate cell-cell colocation array by KL in 3D coordinate and then generate it
 Usage
 --------------------------------------------------------------------------------
 
-.. code-block:: python3  
-python3 CellColocation.py 
+.. code-block:: python3
+
+  python3 CellColocation.py 
 
 ================== ===========================================================
-optional arguments                description
+argument           description
 ================== ===========================================================  
 -h, --help         show this help message and exit
 -i                 in.h5ad
