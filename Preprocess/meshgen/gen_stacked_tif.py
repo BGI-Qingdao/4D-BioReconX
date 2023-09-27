@@ -6,15 +6,14 @@ from skimage import io as skio
 import sys
 
 SP=sys.argv[1]
-
-binsize = 20.0
+binsize = int(sys.argv[2])
 infos = pd.read_csv(f'{SP}.csv',sep=' ',header=None)
 infos.columns = ['filename','zvalue']
 infos['zvalue'] = infos['zvalue'].astype(int)
 infos['zvalue'] = infos['zvalue'] - 1 # start from 0
 slices = {}
 
-annos = pd.read_csv(f'../01.prepare_anno/{SP}.cellbin.SPC.txt',sep=',',header=0)
+annos = pd.read_csv(f'{SP}.anno.txt',sep=',',header=0)
 
 for i , row in infos.iterrows():
     cellmask = np.loadtxt(row['filename'],dtype=int)

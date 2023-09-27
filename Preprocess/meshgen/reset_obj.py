@@ -48,6 +48,6 @@ def add_mesh_str(objfile,binsize,outfile):
     obj_new.to_csv(outfile,sep=' ',header=False,index=False)
 
 infile = sys.argv[1]
-binsize=20
 outfile= sys.argv[2]
+binsize= int(sys.argv[3])
 add_mesh_str(infile,binsize,outfile)
