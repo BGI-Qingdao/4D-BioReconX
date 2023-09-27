@@ -13,4 +13,5 @@ and Annotation to integrate the series of Stereo-seq slices and obtain comprehen
   data-preprocess
   mirror
   seam
+  cell-segmentation
   meshgen
