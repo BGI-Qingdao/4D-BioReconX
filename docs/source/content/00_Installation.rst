@@ -1,69 +1,32 @@
 Installation
 ============
 
-.. attention::
-    Our tool could be installed on Linux/Windows with Python3.8.
+Our tools should be installed on a Linux/Windows system with Python3.8+.
 
-Anaconda
----------
+Development Mode
+--------------------
 
-We strongly recommend your operation in an isolated conda environment, so firstly run:
+We strongly recommend your installation executed in an isolated conda environment, so firstly run:
 
 .. code-block:: 
 
-    conda create --name st python=3.8  # The env name could be set arbitrarily, not only st.
+    conda create --name 4d-bioreconx python=3.8 # The env name could be set arbitrarily.
 
 Then get into the environment you build:
 
 .. code-block:: 
 
-    conda activate st
-
-Use the installation command with conda:
-
-.. code-block:: 
-
-    conda install stereopy -c stereopy -c grst -c numba -c conda-forge -c bioconda
-
-PyPI
-----
-
-The same beginning as conda part:
-
-.. code-block:: 
-    
-    conda create --name st python=3.8
-
-    conda activate st
-
-
-Use PyPI run:
-
-.. code-block:: 
-
-    pip install stereopy
-
-Development Version
---------------------
-
-The same beginning as conda part:
-
-.. code-block:: 
-
-    conda create --name st python=3.8
-
-    conda activate st
-
+    conda activate 4d-bioreconx
 
 Use the latest version of dev branch on Github, you need to clone the repository and enter the directory: 
 
 .. code-block:: 
 
-    git clone -b dev https://github.com/STOmics/stereopy.git
+    git clone -b dev https://github.com/BGI-Qingdao/4D-BioReconX.git
 
-    cd stereopy
+    cd 4D-BioReconX
 
-    python setup.py install
+Install each module of interest via following its own instructions
 
 
 Troubleshooting 
@@ -83,4 +46,17 @@ Find out packages that lead to failures, then create a new requirements.txt of t
 
     pip install -r requirements.txt
 
+Conda installation
+---------
 
+.. code-block:: 
+
+    conda create --name 4d-bioreconx python=3.8 
+
+    conda activate 4d-bioreconx
+
+Use the installation command with conda:
+
+.. code-block:: 
+
+    Coming soon...
