@@ -23,24 +23,32 @@ usage
 main usage
 
 .. code-block:: python3
-MIRROR.py -h
+
+    MIRROR.py -h
 
 Usage:
+
     MIRROR.py action [options]
 
 Actions:
+
     prepare_registration_heatmap
+
     prepare_registration_ssdna
+
     second_registration
+
     gem_to_gemc
+
     gemc_to_h5ad
 
 prepare_registration_heatmap
 ++++++++++++++++++++++++++++++++++++
+
 Usage : MIRROR.py prepare_registration_heatmap
 
 ===================== ================================================================================================
-arguments             description
+argument              description
 ===================== ================================================================================================   
 -g                    gem file
 -o                    output prefix 
@@ -56,7 +64,7 @@ prepare_registration_ssdna
 Usage : MIRROR.py prepare_registration_ssdna 
 
 ===================== ================================================================================================
-arguments             description
+argument             description
 ===================== ================================================================================================  
 -d                    ssdna tif/png file
 -o                    output prefix
@@ -73,7 +81,7 @@ second_registration
 Usage : MIRROR.py second_registration 
 
 ===================== ================================================================================================
-arguments             description
+argument             description
 ===================== ================================================================================================  
 -H                    heatmap.trackline.tif/png
 -d                    ssDNA.trackline.tif/png
@@ -95,21 +103,29 @@ Note:
 
 Example of matrix
 ************************
+
 A 3*3 backward affine matrix
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 -f '[[0.033629421,0.983042659,-133.4590388],[-0.983042659,0.033629421,2262.081494],[0,0,1]]'
 
 or a 3*4 Fujiyama output matrix
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 -a '0.9789672225355872 -0.014001262294250694 0 0.014001262294229377 0.9789672225355872 0 0 0 0.9790673409653101 -49.386112981985995 -98.51787299912003 0'
 
 or a 2*3 TrackEM output matrix
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 -t '-0.010963829,-0.999939895,0.999939895,-0.010963829,-129.2603788,1664.628308'
 
 gem_to_gemc
 ++++++++++++
+
 Usage : MIRROR.py gem_to_gemc 
 
 ===================== ================================================================================================
-arguments             description
+argument              description
 ===================== ================================================================================================  
 -s                    ssdna tif/png file
 -g                    gem file
@@ -151,7 +167,7 @@ gemc_to_h5ad
 Usage : MIRROR.py gemc_to_h5ad  
 
 ===================== ================================================================================================
-arguments             description
+argument              description
 ===================== ================================================================================================  
 -i                    xxx.gemc
 -o                    prefix
