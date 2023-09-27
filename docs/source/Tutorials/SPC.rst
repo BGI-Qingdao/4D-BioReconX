@@ -9,50 +9,52 @@ Spatial Proximity based Clustering (SPC) is designed as a cell clustering strate
 Usage
 =============================
 The main workflow of SPC including
+
 - step1: define cell attributes, which you can do with clustering tools like Seurat or others you prefer
+
 - step2: non-continuous segmentation on the spatial coordinate, which can be performed with our tools
+
 - step3: re-clustering on the segmented spc cells
 
 Example workflow:
 =============================
   preparation
   .. code-block:: python3
+   python
+   import matplotlib.pyplot as plt
+   import anndata
+   import scanpy as sc
+   import spc
+
+  plot function to show annotation or clustering results on spatial
+  .. code-block:: python3  
+    def spatial_plot(adata, color='annotation'):
+      x, y = zip(*adata.obsm['spatial'])
+      annotations = adata.obs[color].unique()     
+      colors = spc.colors[:len(annotations)]
+      color_dict = dict((anno, color) for anno, color in zip(annotations, colors))
+      c = [color_dict[anno] for anno in adata.obs[color]]
+      plt.scatter(x, y, s=1, c=c, lw=0, edgecolors='none')
+      plt.gca().set_aspect('equal')
+      plt.show()
+
+  process function to cluster spatial data
+  .. code-block:: python3
+      def sc_pp(adata):
+        sc.pp.normalize_total(adata)
+        sc.pp.log1p(adata)
+        sc.pp.highly_variable_genes(adata)
+        sc.pp.scale(adata, max_value=10)
+        sc.tl.pca(adata, svd_solver='arpack')
+        sc.pp.neighbors(adata, n_neighbors=10, n_pcs=40)
+        sc.tl.umap(adata)
+        sc.tl.leiden(adata)
+
+  read in example data and make a copy for spc process
+  .. code-block:: python3
     python
-    import matplotlib.pyplot as plt
-    import anndata
-    import scanpy as sc
-    import spc
-
-plot function to show annotation or clustering results on spatial
-************************************************************************
-  
-def spatial_plot(adata, color='annotation'):
-    x, y = zip(*adata.obsm['spatial'])
-    annotations = adata.obs[color].unique()     
-    colors = spc.colors[:len(annotations)]
-    color_dict = dict((anno, color) for anno, color in zip(annotations, colors))
-    c = [color_dict[anno] for anno in adata.obs[color]]
-    plt.scatter(x, y, s=1, c=c, lw=0, edgecolors='none')
-    plt.gca().set_aspect('equal')
-    plt.show()
-
-process function to cluster spatial data
-************************************************************************
-def sc_pp(adata):
-  sc.pp.normalize_total(adata)
-  sc.pp.log1p(adata)
-  sc.pp.highly_variable_genes(adata)
-  sc.pp.scale(adata, max_value=10)
-  sc.tl.pca(adata, svd_solver='arpack')
-  sc.pp.neighbors(adata, n_neighbors=10, n_pcs=40)
-  sc.tl.umap(adata)
-  sc.tl.leiden(adata)
-
-read in example data and make a copy for spc process
-.. code-block:: python3
-  python
-  adata = anndata.read('mousebrain_cellbin.h5ad')
-  adata
+    adata = anndata.read('mousebrain_cellbin.h5ad')
+    adata
 
   AnnData object with n_obs × n_vars = 50140 × 25879  
   &emsp;&emsp;obs: 'annotation'  
@@ -61,17 +63,17 @@ read in example data and make a copy for spc process
   &emsp;&emsp;obsm: 'spatial'  
   &emsp;&emsp;layers: 'counts'  
   
-.. code-block:: python3  
-  python
-  adata.X = adata.layers['counts']
-  adata.obs[['x', 'y']] = adata.obsm['spatial']
-  cell2coords = adata.obs[['x', 'y']].copy()
-  spc_adata = adata.copy()
+  .. code-block:: python3  
+    python
+    adata.X = adata.layers['counts']
+    adata.obs[['x', 'y']] = adata.obsm['spatial']
+    cell2coords = adata.obs[['x', 'y']].copy()
+    spc_adata = adata.copy()
 
-view the original annotated celltype on spatial (see ???)
-.. code-block:: python3
-  python
-  spatial_plot(adata, color='annotation')
+  view the original annotated celltype on spatial 
+  .. code-block:: python3
+    python
+    spatial_plot(adata, color='annotation')
   
 .. image:: https://github.com/lskfs/SPC/blob/main/demo/annotation.png
     :alt: Title figure
