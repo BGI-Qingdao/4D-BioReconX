@@ -17,6 +17,8 @@ def ParseArgs():
     parser.add_argument('-m', '--min_bin', default=50, type=int, required=False, help='the minimum allowed cell number of a bin, default(50)')
     parser.add_argument('-n', '--num_HVG', default=5000, type=int, required=False, help='the number of HVG bin, default(5000)')
     parser.add_argument('-b', '--bin_num', default=100, type=int, required=False, help='the total bin number, default(100)')
+    parser.add_argument('-s', '--spatial', default='spatial', type=str, required=False, help='the coordinate key in obsm default(spatial)')
+    parser.add_argument('-a', '--axis', default=0, type=int, required=False, help='idx of spatial default(0)')
     args = parser.parse_args()
     print(f'input = {args.input}')
     print(f'output = {args.output}')
@@ -92,7 +94,7 @@ def main():
     ################################ Load data
     adata = sc.read_h5ad(args.input)
     ################################ Get position data
-    xPos = adata.obsm['spatial_DVadj'][:,0]
+    xPos = adata.obsm[args.spatial][:,args.axis]
     ################################ Get bin system
     xmin, xmax, binsize = GetValidConf(xPos,args.bin_num, args.min_bin)
     ################################ Create bin lables

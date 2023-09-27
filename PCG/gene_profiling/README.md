@@ -19,6 +19,9 @@ optional arguments:
                 the number of HVG bin, default(5000)
   -b BIN_NUM, --bin_num BIN_NUM
                 the total bin number, default(100)
+  -s SPATIAL, --spatial SPATIAL
+                the coordinate key in obsm default(spatial)
+  -a AXIS, --axis AXIS idx of spatial default(0)
 
 Best wishes
 ```
