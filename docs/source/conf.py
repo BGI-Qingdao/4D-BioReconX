@@ -18,7 +18,7 @@ suppress_warnings = ['ref.citation']
 
 # General information
 project = '4D-BioReconX'
-copyright = '2023, xumengyang'
+copyright = '2023, BGI-Qingdao'
 author = 'xumengyang'
 version = 'v0.10.0'
 release = 'v0.10.0'
