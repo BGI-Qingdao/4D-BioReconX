@@ -22,7 +22,7 @@ main usage
 ++++++++++++
 
 .. code-block:: python3                                                                                                                                          
-python3 GEM3D_toolkit.py -h
+  python3 GEM3D_toolkit.py -h
 
 Usage : GEM_toolkit.py action [options]
 
@@ -95,8 +95,10 @@ Action usage
 if your need action **xxx**'s usage, please try **./GEM3D_toolkit.py  xxx -h**
 
 for example:
+
 .. code-block:: python3                                                                   
-python3 GEM3D_toolkit.py mask_gem -h
+
+  python3 GEM3D_toolkit.py mask_gem -h
 
 =================== ===========================================================
 arguments           description
