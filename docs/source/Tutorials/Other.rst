@@ -6,7 +6,7 @@ This section introduces various methods to meet user-defined requirements, such 
 .. toctree::
 	:caption: Polarity analysis
 	:hidden: 
-	:maxdepth: 1
+	:maxdepth: 2
 
  assign_blastema_region
  body_straightening
