@@ -18,7 +18,7 @@ raw photo
 
 .. image:: ../_static/assign_blastema_region_raw.png
     :alt: Title figure
-    :width: 700px
+    :width: 350px
     :align: center
 
 2D mapping photo of 3D atlas
@@ -26,7 +26,7 @@ raw photo
 
 .. image:: ../_static/assign_blastema_region_2d.png
     :alt: Title figure
-    :width: 700px
+    :width: 350px
     :align: center
 
 align photo and detect wound mask
@@ -80,5 +80,5 @@ final region image
 
 .. image:: ../_static/assign_blastema_region_final.png
     :alt: Title figure
-    :width: 700px
+    :width: 350px
     :align: center
