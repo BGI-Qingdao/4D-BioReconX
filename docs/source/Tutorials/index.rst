@@ -1,24 +1,21 @@
 Tutorials
 ============
 This section consists of various cases which will make you familiar with the process of 
-main analysis. If you want to dig deeper, **API** could give more information.
+main analyses.
 
 
 .. card:: WACCA
     :octicon:`book;1em;`
     :link: Preprocess
     :link-type: doc
-
-   This section contains a Whole-Animal reconstruction pipeline using 2D multimodal registration, Cell segmentation, Clustering,\
-     and Annotation to integrate the series of Stereo-seq slices and obtain comprehensive 3D anatomic and molecular profiles.
+    This section contains a Whole-Animal reconstruction pipeline using 2D multimodal registration, Cell segmentation, Clustering, and Annotation to integrate the series of Stereo-seq slices and obtain comprehensive 3D anatomic and molecular profiles.
 
 .. card:: SPC analysis
     :octicon:`book;1em;`
     :link: BIO
     :link-type: doc
 
-    This section contains a pipeline for spatial proximity-based clustering (SPC) to group similar cells into the same cluster\
-      based on both transcriptional similarity and spatial proximity, as well as downstream analyses.
+    This section contains a pipeline for spatial proximity-based clustering (SPC) to group similar cells into the same cluster based on both transcriptional similarity and spatial proximity, as well as downstream analyses.
 
 .. card:: Polarity analysis
     :octicon:`book;1em;`
