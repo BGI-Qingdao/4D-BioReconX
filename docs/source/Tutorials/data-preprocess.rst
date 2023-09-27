@@ -48,35 +48,35 @@ Affine tools:
 
 Region of interest(ROI) tools:
                                                                            
-   chop_image                    chop region of interests from whole image.
+  chop_image                    chop region of interests from whole image.
                                                                            
-   chop_gem                      chop region of interests from GEM(C).
+  chop_gem                      chop region of interests from GEM(C).
 
- Mask tools:
+Mask tools:
                                                                            
-   mask_gem                      mask GEM(C) by mask image.
+  mask_gem                      mask GEM(C) by mask image.
                                                                            
-   mask_h5ad                     mask h5ad data by mask image.
+  mask_h5ad                     mask h5ad data by mask image.
 
- Visualization tools:
+Visualization tools:
                                                                            
-   draw_heatmap                  draw heatmap of expression counts in bin1 resolution with/without cellbin and with/without ssDNA.
+ draw_heatmap                  draw heatmap of expression counts in bin1 resolution with/without cellbin and with/without ssDNA.
                                                                            
-   image_blend                   merge image(like heatmap/annotation image) with ssDNA and border image
+ image_blend                   merge image(like heatmap/annotation image) with ssDNA and border image
 
- Other tools:
+Other tools:
                                                                            
-   chop_paste                    chop or paste ssDNA image. This tool is useful for ultra-large ssDNA image.
+  chop_paste                    chop or paste ssDNA image. This tool is useful for ultra-large ssDNA image.
                                                                            
-   trakEM2_to_affine             covert trakEM2_matrix to standart affine matrix.
+  trakEM2_to_affine             covert trakEM2_matrix to standart affine matrix.
                                                                            
-   split_gem                     split gem by x or y coordinate.
+  split_gem                     split gem by x or y coordinate.
                                                                            
-   merge_h5ad                    merge files of h5ad.
+  merge_h5ad                    merge files of h5ad.
                                                                            
-   gem_xy                        get xmin ymin of gem
+  gem_xy                        get xmin ymin of gem
 
-   -h/--help               show this short usage
+  -h/--help               show this short usage
 
 Action usage
 ************************
