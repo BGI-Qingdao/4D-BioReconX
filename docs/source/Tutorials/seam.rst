@@ -6,7 +6,7 @@ SEAM Pipeline
 .. note:: 
 seam pipeline aims to align and merge serial slices (each slice in an H5AD file) into one 3D atlas ( one H5AD file with aligned 3D coordinates)
 
-.. image:: ../_static/seam_workflow.png
+.. image:: ../_static/seam_ipo.png
     :alt: Title figure
     :width: 700px
     :align: center
@@ -19,7 +19,7 @@ seam pipeline contains three main steps:
 * align all images
 * apply alignment to raw data and merge
 
-.. image:: ../_static/seam_3d.png
+.. image:: ../_static/seam_workflow.png
     :alt: Title figure
     :width: 700px
     :align: center 
