@@ -62,8 +62,7 @@ Workflow
     content/00_Installation
     content/01_Basic_Usage
     Tutorials/index
-    content/03_API
-    content/04_References
+    content/03_References
 
 
 .. |docs| image:: https://img.shields.io/static/v1?label=docs&message=4d-bioreconx&color=green
