@@ -3,7 +3,13 @@
 Stereo-seq data preprocessing
 ========================================
 
-Stereo-seq sequencing data were preprocessed using **SAW** (https://github.com/STOmics/SAW) to generate spatial gene expression matrices in **GEM** format (https://stereopy.readthedocs.io/en/latest/Tutorials/IO.html#GEM).
+Stereo-seq sequencing data were preprocessed using 
+
+**SAW** (https://github.com/STOmics/SAW) 
+
+to generate spatial gene expression matrices in 
+
+**GEM** format (https://stereopy.readthedocs.io/en/latest/Tutorials/IO.html#GEM).
 
 Image files, which are usually in **TIFF** format, generated during the stereo-seq library construction process should be ready for further process together with the GEM files.
 
@@ -21,7 +27,8 @@ We provide a flexible toolkit to process GEM and ssDNA files.
 main usage
 ++++++++++++
 
-.. code-block:: python3                                                                                                                                          
+.. code-block:: python3
+
   python3 GEM3D_toolkit.py -h
 
 Usage : GEM_toolkit.py action [options]
