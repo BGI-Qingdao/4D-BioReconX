@@ -13,11 +13,11 @@ seam pipeline aims to align and merge serial slices (each slice in an H5AD file)
 
 Workflow
 ========
-seam pipeline contains three main steps:
 
-* prepare alignment images
-* align all images
-* apply alignment to raw data and merge
+seam pipeline contains three main steps:
+    prepare alignment images
+    align all images
+    apply alignment to raw data and merge
 
 .. image:: ../_static/seam_workflow.png
     :alt: Title figure
@@ -31,44 +31,47 @@ Usages
 the main usage
 
 .. code-block:: python3
-  SEAM.py -h
-  > Usage:
-  > SEAM.py action [options]
-  >
-  > Actions:
-  >   prepare_alignment_image
-  >   get_xml_matrix
-  >   apply_alignment
+SEAM.py -h
+
+Usage:
+  SEAM.py action [options]
+ 
+Actions:
+  prepare_alignment_image
+  get_xml_matrix
+  apply_alignment
 
 prepare_alignment_image usage
 =============================
 
 .. code-block:: python3
-  SEAM.py prepare_alignment_image -h
-  > Usage :
-  > SEAM.py  prepare_alignment_image   -m <mask.txt>
-  >                                    -o <output.png>
-  >                                    -t <celltype.csv>
+SEAM.py prepare_alignment_image -h
+
+Usage :
+SEAM.py  prepare_alignment_image   -m <mask.txt>
+                                   -o <output.png>
+                                   -t <celltype.csv>
 
 get_xml_matrix usage
 ====================
 
 .. code-block:: python3
-  SEAM.py get_xml_matrix -h
-  >Usage :
-  > SEAM.py get_xml_matrix.py -i <file.xml>
-  >                           -o  <output>
+SEAM.py get_xml_matrix -h
+
+Usage :
+SEAM.py get_xml_matrix.py -i <file.xml>
+                           -o  <output>
   
 apply_alignment usage
 ======================
 
 .. code-block:: python3
-  SEAM.py apply_alignment -i <input.json or input.csv>
-  >                         -o <output prefix>
-  >                         -W [the width of aligned image, default equal to input image]
-  >                         -H [the height of aligned image, default equal to input image]
-  >                         -m [True/False, merge all h5ad to one if True, default False]
-  >                         -S [True/False, add Sn to cell name if -m=True, default False ]
+SEAM.py apply_alignment -i <input.json or input.csv>
+                         -o <output prefix>
+                         -W [the width of aligned image, default equal to input image]
+                         -H [the height of aligned image, default equal to input image]
+                         -m [True/False, merge all h5ad to one if True, default False]
+                         -S [True/False, add Sn to cell name if -m=True, default False ]
 
 
 The detail of input csv or json file
@@ -110,28 +113,21 @@ As you see, now you only need to provide available data with any order of your w
 
 Correspondence between column name and JSON data item.
 
-.. note:: 
-    flag (default '')        -- 1. Sn
-
-    gem (default '')         -- 2. gemfile_N 
-
-    h5ad (default '')        -- 3. h5adfile_N             
-
-    ssdna (default '')       -- 4. ssdnafile_N         
-
-    mask (default '')        -- 5. maskfile_N               
-
-    3D_forward (required! )  -- 6. the 3D alignment matrix     
-
-    Z_values (required! )    -- 7. the z value                 
-
-    2D_backward (default '') -- 8. the 2D registration matrix  
-
-    outline (default '')     -- 9. outline file                
-
-    x_shift (default 0 )     -- 10. x shift                
-
-    y_shift (default 0 )     -- 11. y shift                
+=========================== ======================================
+optional arguments          description
+=========================== ======================================
+flag (default '')           -- 1. Sn
+gem (default '')            -- 2. gemfile_N 
+h5ad (default '')           -- 3. h5adfile_N             
+ssdna (default '')          -- 4. ssdnafile_N         
+mask (default '')           -- 5. maskfile_N               
+3D_forward (required! )     -- 6. the 3D alignment matrix     
+Z_values (required! )       -- 7. the z value                 
+2D_backward (default '')    -- 8. the 2D registration matrix  
+outline (default '')        -- 9. outline file                
+x_shift (default 0 )        -- 10. x shift                
+y_shift (default 0 )        -- 11. y shift                
+=========================== ======================================
 
    
 

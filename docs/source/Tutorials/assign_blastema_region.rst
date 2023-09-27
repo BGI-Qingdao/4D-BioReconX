@@ -1,28 +1,49 @@
-# Detect blastema by pigment difference
+.. _`assign_blastema_region`:
+========================================
+Detect blastema by pigment difference
+========================================
 
-## workflow
-![image](https://github.com/BGI-Qingdao/4D-BioReconX/assets/8720584/fb2c54a3-0eff-4d92-99bd-f76516a1898f)
+workflow
+========================================
+.. image:: ../_static/assign_blastema_region_workflow.png
+    :alt: Title figure
+    :width: 700px
+    :align: center
 
-## example images
+example images
+========================================
 
-* raw photo
-  
-![image](https://github.com/BGI-Qingdao/4D-BioReconX/assets/8720584/96c193ee-9044-4973-9516-853098897a4e)
+raw photo
+************************************
 
-* 2D mapping photo of 3D atlas
+.. image:: ../_static/assign_blastema_region_raw.png
+    :alt: Title figure
+    :width: 350px
+    :align: center
 
-![image](https://github.com/BGI-Qingdao/4D-BioReconX/assets/8720584/2859f355-ed30-4ec4-917c-de96f00f2339)
+2D mapping photo of 3D atlas
+************************************
 
-* aligned photo and detect wound mask
+.. image:: ../_static/assign_blastema_region_2d.png
+    :alt: Title figure
+    :width: 350px
+    :align: center
 
-![image](https://github.com/BGI-Qingdao/4D-BioReconX/assets/8720584/57d56423-66c2-459d-9cc8-ef2c2fc912f8)
+align photo and detect wound mask
+************************************
 
-* now assign region to each cells
+.. image:: ../_static/assign_blastema_region_aligned.png
+    :alt: Title figure
+    :width: 700px
+    :align: center
 
-```
+now assign region to each cell
+************************************
+
+.. code-block:: python3
 ./BlastemaByWound_v2.py
 
-Usage   : python3 BlastemaByWound.py < -p prefix>
+Usage: python3 BlastemaByWound.py < -p prefix>
                                      [ -o output prefix, default output]
                                      [ -e exponential number, default 2]
                                      [--only_wound yes/no, default no]
@@ -31,7 +52,7 @@ Usage   : python3 BlastemaByWound.py < -p prefix>
                                      [--rl right wound left extern distance, default 20]
                                      [--rr right wound right extern distance, default 20]
 
-Notice  : the unit of distance is 3 micron, so the default 10 refer to 60 microns.
+Note: the unit of distance is 3 micron, so the default 10 refer to 60 microns.
 
 Example :
           example 01: python3 BlastemaByWound.py -p 12hpa1
@@ -52,9 +73,12 @@ Output label in only_wound mode:
           3 -- [magenta] left wound region, similar to 1+2+3 in blastema mode
           4 -- [yellow]  body
           5 -- [white]   right wound region, similar to 5+6+7 in blastema mode
-```
 
-* final region image
 
-![image](https://github.com/BGI-Qingdao/4D-BioReconX/assets/8720584/ae275b44-47d7-4ec3-bb53-64e880606a75)
+final region image
+========================================
 
+.. image:: ../_static/assign_blastema_region_final.png
+    :alt: Title figure
+    :width: 350px
+    :align: center
