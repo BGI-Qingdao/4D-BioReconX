@@ -48,7 +48,7 @@ Highlights
 Workflow
 ----------
 
-.. image:: ./_static/4D-BioReconX_workflow_v1.0.0.png
+.. image:: ./_static/4D-BioReconX_workflow_v1.0.0.jpg
     :alt: Title figure
     :width: 700px
     :align: center
