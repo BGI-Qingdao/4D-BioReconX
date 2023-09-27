@@ -9,6 +9,12 @@ Workflow
     :width: 700px
     :align: center
 
+Usage
+--------------
+
+Follow the instruction for each module of interest 
+
+
 4D-BioReconX
 --------------
 
