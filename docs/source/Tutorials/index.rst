@@ -19,7 +19,7 @@ main analyses.
 
 .. card:: Polarity analysis
     :octicon:`book;1em;`
-    :link: Data_Preprocessing
+    :link: PCG
     :link-type: doc
 
     This section contains main analyses on polarity-related genes to capture positional gradients along the body axis.
