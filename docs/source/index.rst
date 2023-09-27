@@ -23,8 +23,10 @@
 |stars|  |docs| 
 
 
-4D-BioReconX -  a bioinformatic framework for reconstructing 4D spatial transcriptomics atlas and spatiotemporal analyses+
+4D-BioReconX
 ========================================================
+a bioinformatic framework for reconstructing 4D spatial transcriptomics atlas and spatiotemporal analyses+
+------------------------------------------------------------------------------------------------------------
 
 **4D-BioReconX** is a scalable and versatile framework designed to construct a comprehensive four-dimensional (4D) spatial transcriptomics atlas of whole animals at single-cell resolution. \
 This approach enables us to track the intricate spatiotemporal dependencies of morphogenetic gradients and regenerative patterning. \
