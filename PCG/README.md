@@ -8,7 +8,7 @@ This section mainly contains:
 * [PCA](#pca)
 * [PCG Mining](#pcg-mining)
 <p align="center">
-    <img src="fig.png" width=300 height=600>
+    <img src="../docs/source/_static/fig.png" width=300 height=600>
 </p>
 
 
