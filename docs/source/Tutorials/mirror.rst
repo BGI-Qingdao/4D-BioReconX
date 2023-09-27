@@ -40,7 +40,7 @@ prepare_registration_heatmap
 Usage : MIRROR.py prepare_registration_heatmap
 
 ===================== ================================================================================================
-optional arguments    description
+arguments             description
 ===================== ================================================================================================   
 -g                    gem file
 -o                    output prefix 
@@ -56,7 +56,7 @@ prepare_registration_ssdna
 Usage : MIRROR.py prepare_registration_ssdna 
 
 ===================== ================================================================================================
-optional arguments    description
+arguments             description
 ===================== ================================================================================================  
 -d                    ssdna tif/png file
 -o                    output prefix
@@ -73,7 +73,7 @@ second_registration
 Usage : MIRROR.py second_registration 
 
 ===================== ================================================================================================
-optional arguments    description
+arguments             description
 ===================== ================================================================================================  
 -H                    heatmap.trackline.tif/png
 -d                    ssDNA.trackline.tif/png
@@ -109,7 +109,7 @@ gem_to_gemc
 Usage : MIRROR.py gem_to_gemc 
 
 ===================== ================================================================================================
-optional arguments    description
+arguments             description
 ===================== ================================================================================================  
 -s                    ssdna tif/png file
 -g                    gem file
@@ -151,7 +151,7 @@ gemc_to_h5ad
 Usage : MIRROR.py gemc_to_h5ad  
 
 ===================== ================================================================================================
-optional arguments    description
+arguments             description
 ===================== ================================================================================================  
 -i                    xxx.gemc
 -o                    prefix
