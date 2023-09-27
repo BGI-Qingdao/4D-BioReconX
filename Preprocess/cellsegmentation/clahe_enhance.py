@@ -2,7 +2,8 @@
 import numpy as np
 import cv2
 
-def clahe(image):
+def _clahe(image):
+
     #-----Reading the image-----------------------------------------------------
     if not isinstance(image, np.ndarray):
         image = cv2.imread(image, 1)
@@ -27,16 +28,18 @@ def clahe(image):
     #return cl
     return final
 
-if __name__ == '__main__':
-
-    import sys
-    from pathlib import Path
-
-    image = sys.argv[1]
-    out = Path(image).name
+def clahe(image, iter=5):
+    """
+    Enhance local contrast with CLAHE algorithm
     
-    for i in range(5):
-        image = clahe(image)
-
-    cv2.imwrite(out, image)
-
+    Parameters
+    --------------
+    image: fn, np.ndarray
+        image file name or np.ndarray representing image
+    iter: int
+        how many times to enhance
+    """
+    while iter:
+        image = _clahe(image)
+        iter -= 1
+    return image

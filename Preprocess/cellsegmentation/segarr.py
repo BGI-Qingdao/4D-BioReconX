@@ -43,7 +43,7 @@ def getfootprint(struc, a, b=None):
             sys.exit()
         return morph(a)
 
-class Mask:
+class Stoarr:
     def __init__(self, matrix):
         if isinstance(matrix, str):
             if matrix.endswith('.txt'):
@@ -83,7 +83,7 @@ class Mask:
         matrix[triplet['x'], triplet['y']] = triplet['N']
 
         sys.stdout.write('done\n')
-        return Mask(matrix)
+        return Stoarr(matrix)
 
     def to_binary(self):
         obj = copy.deepcopy(self)
@@ -117,7 +117,7 @@ class Mask:
 
         obj = copy.deepcopy(self)
 
-        if isinstance(other, Mask):
+        if isinstance(other, Stoarr):
             other = other.to_binary()
 
         values = np.unique(obj.matrix)
@@ -160,7 +160,7 @@ class Mask:
             #obj = Mask(matrix)
             #obj.unique_labels = unique_labels
             #obj.labels = labels
-            return Mask(matrix)
+            return Stoarr(matrix)
         else:
             triplet = self.to_triplet()
 
@@ -169,7 +169,7 @@ class Mask:
     
             matrix = np.zeros(shape=self.matrix.shape, dtype=int)
             matrix[triplet['x'], triplet['y']] = triplet['mask_y']
-            return Mask(matrix)
+            return Stoarr(matrix)
     
     def retrieve(self):
         if not self.unique_labels and not self.labels:
@@ -177,7 +177,7 @@ class Mask:
 
         matrix = self.unique_labels[self.labels]
         matrix = matrix.reshape(self.shape)
-        obj = Mask(matrix)
+        obj = Stoarr(matrix)
 
         return obj
 
@@ -347,6 +347,64 @@ class Mask:
             cv2.imwrite(f'{prefix}.outlines.png', image)
         return b, image
 
+def thres_mask(image, out_prefix=None):
+    image = cv2.imread(image, 0)
+
+    _, th = cv2.threshold(image, 20, 255, cv2.THRESH_BINARY)
+
+    if out_prefix:
+        cv2.imwrite(f'{prefix}.mask.tif', th)
+    return th
+
+def mixture_seg(cell_mask, tissue_mask, blur_mask, image=None, prefix='out',):
+
+    cell_mask = Stoarr(cell_mask)
+    tissue_mask = Stoarr(tissue_mask)
+    blur_mask = Stoarr(blur_mask)
+
+    blur_mask = blur_mask.minimum_filter(
+            footprint='octagon',
+            ksize=(7, 4)
+    )
+
+    orig_cell_mask = cell_mask.intersection(
+            tissue_mask, 
+            label_area_cutoff=0.3
+    )
+
+    cell_mask = orig_cell_mask.filter_by_matrix(
+            on=blur_mask, 
+            max_value=90, 
+            draw=True,
+            prefix=prefix
+    )
+
+    cell_mask = cell_mask.filter_by_diameter(
+            min_size=3,
+            max_size=None,
+    )
+
+    tissue_mask = orig_cell_mask.subtract(cell_mask)
+
+    bin_mask = tissue_mask.binning(
+            bin_size=20
+    )
+    
+    mix_mask = cell_mask.merge(
+            bin_mask, 
+            how='left'
+    )
+
+    mix_mask.save(prefix=prefix)
+
+    outlines, image = mix_mask.overlayoutlines(
+            image=image, 
+            prefix=prefix
+    )
+
+    return outlines, image
+
+
 class Options:
     sargs = 'hc:t:b:i:p:'
     largs = ['help', 'cell=', 'tissue=', 'blur=', 'image=', 'prefix=']
@@ -384,55 +442,9 @@ if __name__ == '__main__':
 
     opts = Options(sys.argv[1:])
 
-    cell_mask = Mask(opts.cell_mask)
-    tissue_mask = Mask(opts.tissue_mask)
-    blur_mask = Mask(opts.blur_mask)
-
-    blur_mask = blur_mask.minimum_filter(
-            footprint='octagon',
-            ksize=(7, 4)
-    )
-
-    orig_cell_mask = cell_mask.intersection(
-            tissue_mask, 
-            label_area_cutoff=0.3
-    )
-
-    cell_mask = orig_cell_mask.filter_by_matrix(
-            on=blur_mask, 
-            max_value=90, 
-            draw=True,
-            prefix=opts.prefix
-    )
-
-    cell_mask = cell_mask.filter_by_diameter(
-            min_size=3,
-            max_size=None,
-    )
-
-    tissue_mask = orig_cell_mask.subtract(cell_mask)
-
-    bin_mask = tissue_mask.binning(
-            bin_size=20
-    )
-    
-    # nothing happened here ?
-    #bin_mask = bin_mask.filter_by_matrix(
-    #        on=blur_mask,
-    #        min_value=90,
-    #        draw=True,
-    #        prefix='bin'
-    #)
-    
-    mix_mask = cell_mask.merge(
-            bin_mask, 
-            how='left'
-    )
-
-    mix_mask.save(prefix=opts.prefix)
-
-    outlines, image = mix_mask.overlayoutlines(
-            image=opts.image, 
-            prefix=opts.prefix
-    )
-
+    mixture_seg(opts.cell_mask, 
+                opts.tissue_mask, 
+                opts.blur_mask, 
+                image=opts.image, 
+                prefix=opts.prefix
+                )
