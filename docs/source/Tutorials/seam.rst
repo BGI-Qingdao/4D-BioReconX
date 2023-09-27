@@ -15,6 +15,7 @@ Workflow
 ---------------------------------
 
 seam pipeline contains three main steps:
+
     prepare alignment images
     
     align all images
@@ -30,27 +31,33 @@ seam pipeline contains three main steps:
 Usages
 ---------------------------------
 
-the main usage
+main usage
+++++++++++++++++++++++++++++++++++++
 
 .. code-block:: python3
-python3 SEAM.py -h
+
+    python3 SEAM.py -h
 
 Usage:
   SEAM.py action [options]
  
 Actions:
+
   prepare_alignment_image
+
   get_xml_matrix
+
   apply_alignment
 
 prepare_alignment_image usage
 ++++++++++++++++++++++++++++++++++++
 
 .. code-block:: python3
-python3 SEAM.py prepare_alignment_image
+
+    python3 SEAM.py prepare_alignment_image
 
 ===================== ================================================================================================
-arguments             description
+argument             description
 ===================== ================================================================================================ 
 -h                    help
 -m                    mask.txt
@@ -62,10 +69,11 @@ get_xml_matrix usage
 ++++++++++++++++++++++++++++++++++++
 
 .. code-block:: python3
-python3 SEAM.py get_xml_matrix.py 
+
+    python3 SEAM.py get_xml_matrix.py 
 
 ===================== ================================================================================================
-arguments             description
+argument              description
 ===================== ================================================================================================ 
 -h                    help
 -i                    file.xml
@@ -76,10 +84,11 @@ apply_alignment usage
 ++++++++++++++++++++++++++++++++++++
 
 .. code-block:: python3
-python SEAM.py apply_alignment 
+
+    python SEAM.py apply_alignment 
 
 ===================== ================================================================================================
-arguments             description
+argument              description
 ===================== ================================================================================================
 -i                    input.json or input.csv
 -o                    output prefix
@@ -115,8 +124,9 @@ Details of items in data
 11. y shift, the y coordinate of GEM/h5ad corresponds to the y=0 coordinate of the alignment image (and cell mask file).
 
 .. note:: 
-In the above json file, you must provide full 11 info for each data
-To make life easier, you may use the more flexible input.csv
+
+    In the above json file, you must provide full 11 info for each data
+    To make life easier, you may use the more flexible input.csv
 
 Example of a tiny input.csv
 ++++++++++++++++++++++++++++++++++++
@@ -132,7 +142,7 @@ As you see, now you only need to provide available data with any order of your w
 Correspondence between column name and JSON data item.
 
 =========================== ======================================
-arguments                   description
+argument                    description
 =========================== ======================================
 flag (default '')           -- 1. Sn
 gem (default '')            -- 2. gemfile_N 
