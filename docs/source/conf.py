@@ -20,8 +20,8 @@ suppress_warnings = ['ref.citation']
 project = '4D-BioReconX'
 copyright = '2023, BGI-Qingdao'
 author = 'xumengyang'
-version = 'v0.10.0'
-release = 'v0.10.0'
+version = 'v1.0.0'
+release = 'v1.0.0'
 
 # default settings
 templates_path = ['_templates']
@@ -72,7 +72,7 @@ html_theme_options = {
         "show_navbar_depth":0,
         "light_css_variables": {
         "color-brand-primary": "#003262",
-        "color-brand-content": "#02d8f0",
+        "color-brand-content": "#003262",
         "admonition-font-size": "var(--font-size-normal)",
         "admonition-title-font-size": "var(--font-size-normal)",
         "code-font-size": "var(--font-size--small)",
