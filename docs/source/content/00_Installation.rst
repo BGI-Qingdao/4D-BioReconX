@@ -47,7 +47,7 @@ Find out packages that lead to failures, then create a new requirements.txt of t
     pip install -r requirements.txt
 
 Conda installation
----------
+-------------------------
 
 .. code-block:: 
 
