@@ -1,5 +1,5 @@
 # Polarity Analysis
-To investgate spatial patterns of gene expression capture positional gradients, we conducted a qualitative analysis of `positional control genes (PCGs)` spaning the planarian body axis. 
+To investigate spatial patterns of gene expression capture positional gradients, we conducted a qualitative analysis of `positional control genes (PCGs)` spanning the planarian body axis. 
 
 This section mainly contains:
 
@@ -53,7 +53,7 @@ labels = clusterer.labels_
 labels = labels.astype(int)
 
 # Second round of "clustering"
-# for those genes were not assigned into a cluster in the first round (labeled as -1), use LogicRegression to find which cluster's genes it is most similiar to
+# for those genes that were not assigned into a cluster in the first round (labeled as -1), use LogicRegression to find which cluster's genes it is most similar to
 svc = LogisticRegression()
 svc.fit(df.to_numpy(),labels[labels!=-1])
 recall_non_labels = svc.predict(df[labels==-1].to_numpy())
@@ -94,7 +94,7 @@ example:
 ```
 
 ## PCG Mining
-Find genes that could be PCGs by calculating and evaulating correlation coefficient values between known PCGs (from pulished studies) and target genes.
+Find genes that could be PCGs by calculating and evaluating correlation coefficient values between known PCGs (from published studies) and target genes.
 ```
 # A. Use Spearman's rank correlation coefficient
 import scipy.stats
