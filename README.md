@@ -4,7 +4,7 @@
 ## **4D-BioReconX**: a bioinformatic framework for reconstructing 4D spatial transcriptomics atlas and spatiotemporal analyses+
 
 [Installation](https://4d-bioreconx.readthedocs.io/en/latest/content/00_Installation.html) - 
-[Quick start](https://4d-bioreconx.readthedocs.io/en/latest/Tutorials/SquareBin_Clustering.html) - 
+[Quick start](https://4d-bioreconx.readthedocs.io/en/latest/Tutorials/index.html) - 
 [Documentation](https://4d-bioreconx.readthedocs.io/en/latest/index.html)
 
 <img src="https://github.com/BGI-Qingdao/4D-BioReconX/blob/main/docs/source/_static/4D-BioReconX_workflow_v1.0.0.jpg" width="100%" height="100%">
@@ -24,3 +24,5 @@ Please use GitHub [issues](https://github.com/BGI-Qingdao/4D-BioReconX/issues) t
 
 ## Contribution 
 **4D-BioReconX** is in a stage of rapid development so that we will carefully consider all aspects of your proposal. We hope future input will be given by both users and developers.
+
+
