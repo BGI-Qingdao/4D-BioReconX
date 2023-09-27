@@ -39,7 +39,7 @@ Actions
 Format converting tools
 ************************************       
 ===================== ================================================================================================
-arguments             description
+argument              description
 ===================== ================================================================================================   
 gem_to_h5ad           convert GEM into h5ad by a certain binsize.
 ===================== ================================================================================================   
@@ -47,7 +47,7 @@ gem_to_h5ad           convert GEM into h5ad by a certain binsize.
 Affine tools
 ************************************                                                                       
 ===================== ================================================================================================
-arguments             description
+argument              description
 ===================== ================================================================================================   
 affine_gem            modify the 2D coordinate in GEM(C) by user-defined affine matrix.                                                                    
 affine_h5ad           modify the 2D coordinate in GEM(C) by user-defined affine matrix.
@@ -60,7 +60,7 @@ apply_cells           add cells column to gem based on registered mask file.
 Region of interest (ROI) tools
 ************************************
 ===================== ================================================================================================
-arguments             description
+argument              description
 ===================== ================================================================================================                                             
 chop_image            chop region of interests from whole image.                                                                           
 chop_gem              chop region of interests from GEM(C).
@@ -69,7 +69,7 @@ chop_gem              chop region of interests from GEM(C).
 Mask tools
 ************************************
 ===================== ================================================================================================
-arguments             description
+argument             description
 ===================== ================================================================================================                                            
 mask_gem              mask GEM(C) by mask image.                                                                 
 mask_h5ad             mask h5ad data by mask image.
@@ -78,7 +78,7 @@ mask_h5ad             mask h5ad data by mask image.
 Visualization tools
 ************************************
 ===================== ================================================================================================
-arguments             description
+argument              description
 ===================== ================================================================================================
 draw_heatmap          draw heatmap of expression counts in bin1 resolution with/without cellbin and with/without ssDNA.
 image_blend           merge image(like heatmap/annotation image) with ssDNA and border image
@@ -87,7 +87,7 @@ image_blend           merge image(like heatmap/annotation image) with ssDNA and 
 Other tools
 ************************************
 ===================== ===============================================================================
-arguments             description
+argument             description
 ===================== ===============================================================================
 chop_paste            chop or paste ssDNA image. This tool is useful for ultra-large ssDNA image.   
 trakEM2_to_affine     covert trakEM2_matrix to standart affine matrix.                                                                         
@@ -108,7 +108,7 @@ for example:
   python3 GEM3D_toolkit.py mask_gem -h
 
 =================== ===========================================================
-arguments           description
+argument            description
 =================== ===========================================================
 -i                  input.gem
 -m                  mask.png  
