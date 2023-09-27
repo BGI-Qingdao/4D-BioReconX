@@ -4,7 +4,7 @@ SEAM Pipeline
 ========================================
 
 .. note:: 
-seam pipeline aims to align and merge serial slices (each slice in an H5AD file) into one 3D atlas ( one H5AD file with aligned 3D coordinates)
+The seam pipeline aims to align and merge serial slices (each slice in an H5AD file) into one 3D atlas ( one H5AD file with aligned 3D coordinates).
 
 .. image:: ../_static/seam_ipo.png
     :alt: Title figure
@@ -12,11 +12,13 @@ seam pipeline aims to align and merge serial slices (each slice in an H5AD file)
     :align: center
 
 Workflow
-========
+---------------------------------
 
 seam pipeline contains three main steps:
     prepare alignment images
+    
     align all images
+
     apply alignment to raw data and merge
 
 .. image:: ../_static/seam_workflow.png
@@ -26,12 +28,12 @@ seam pipeline contains three main steps:
 
 
 Usages
-======
+---------------------------------
 
 the main usage
 
 .. code-block:: python3
-SEAM.py -h
+python3 SEAM.py -h
 
 Usage:
   SEAM.py action [options]
@@ -42,49 +44,64 @@ Actions:
   apply_alignment
 
 prepare_alignment_image usage
-=============================
+++++++++++++++++++++++++++++++++++++
 
 .. code-block:: python3
-SEAM.py prepare_alignment_image -h
+python3 SEAM.py prepare_alignment_image
 
-Usage :
-SEAM.py  prepare_alignment_image   -m <mask.txt>
-                                   -o <output.png>
-                                   -t <celltype.csv>
+===================== ================================================================================================
+arguments             description
+===================== ================================================================================================ 
+-h                    help
+-m                    mask.txt
+-o                    output.png
+-t                    celltype.csv
+===================== ================================================================================================
 
 get_xml_matrix usage
-====================
+++++++++++++++++++++++++++++++++++++
 
 .. code-block:: python3
-SEAM.py get_xml_matrix -h
+python3 SEAM.py get_xml_matrix.py 
 
-Usage :
-SEAM.py get_xml_matrix.py -i <file.xml>
-                           -o  <output>
-  
+===================== ================================================================================================
+arguments             description
+===================== ================================================================================================ 
+-h                    help
+-i                    file.xml
+-o                    output
+===================== ================================================================================================ 
+
 apply_alignment usage
-======================
+++++++++++++++++++++++++++++++++++++
 
 .. code-block:: python3
-SEAM.py apply_alignment -i <input.json or input.csv>
-                         -o <output prefix>
-                         -W [the width of aligned image, default equal to input image]
-                         -H [the height of aligned image, default equal to input image]
-                         -m [True/False, merge all h5ad to one if True, default False]
-                         -S [True/False, add Sn to cell name if -m=True, default False ]
+python SEAM.py apply_alignment 
 
+===================== ================================================================================================
+arguments             description
+===================== ================================================================================================
+-i                    input.json or input.csv
+-o                    output prefix
+-W                    the width of aligned image, default equal to input image
+-H                    the height of the aligned image, default equal to input image
+-m                    True/False, merge all h5ad to one if True, default False
+-S                    True/False, add Sn to cell name if -m=True, default False
+===================== ================================================================================================
 
-The detail of input csv or json file
-======================================
+Details of input csv or json file
+---------------------------------
 
 Example of input.json
-************************
+++++++++++++++++++++++++++++++++++++
+
 ['S1',"gemfile_1","h5adfile_1","ssdnafile_1","maskfile_1","[[1,0,10], [0,1,0],[0.0, 0.0, 1.0]]","z_value","[[1,0,0], [0,1,0],[0.0, 0.0, 1]]","outlinefile_1",10,0],
        
 ['Sn',"gemfile_N","h5adfile_N","ssdnafile_N","maskfile_N","[[1,0,10], [0,1,0],[0.0, 0.0, 1.0]]","z_value","[[1,0,0], [0,1,0],[0.0, 0.0, 1]]","outlinefile_N",0,10]
 
-Detail of items in data
-************************
+Details of items in data
+++++++++++++++++++++++++++++++++++++
+
 1. Sn: name of this data.
 2. gemfile_N: the GEM/GEMC file of this data, use "" if unavailable.
 3. h5adfile_N: the h5ad file of this data, use "" if unavailable.
@@ -102,7 +119,8 @@ In the above json file, you must provide full 11 info for each data
 To make life easier, you may use the more flexible input.csv
 
 Example of a tiny input.csv
-***************************
+++++++++++++++++++++++++++++++++++++
+
 h5ad,3D_forward,Z_values
 
     xx1.h5ad,"[[1,0,10],[0,1,0],[0.0, 0.0, 1.0]]",10
@@ -114,7 +132,7 @@ As you see, now you only need to provide available data with any order of your w
 Correspondence between column name and JSON data item.
 
 =========================== ======================================
-optional arguments          description
+arguments                   description
 =========================== ======================================
 flag (default '')           -- 1. Sn
 gem (default '')            -- 2. gemfile_N 
