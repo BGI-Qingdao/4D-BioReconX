@@ -9,26 +9,27 @@ Calculate cell-cell colocation array by KL in 3D coordinate and then generate it
 
 Usage
 ========================================
-Usage: CellColocation.py -i <in.h5ad>
+CellColocation.py 
 
-                         -o <prefix>
+  -i <in.h5ad>
 
-                         -b [binsize (for each slice), default 50 (refer to 50um if 1 unit=1um).]
-                                      
-                               Please set -b based on your coordinate system !!!
-                                      
-                               Note: -b must be integer
-                                      
-                         -m [min cell number for a cell type, default 100.]
-                                      
-                         -f [sample fraction, default 0.8. The bootstrap fraction.]
-                                      
-                         -l [loop number, default 100. The number of iterations for bootstrap.]
-                                      
-                         -s [spatial key in obsm, default 'spatial']
-                                      
-                         -a [annotation key in obs, default 'annotation']
+  -o <prefix>
 
+  -b [binsize (for each slice), default 50 (refer to 50um if 1 unit=1um).]
+                                      
+                  Please set -b based on your coordinate system !!!
+                                      
+                  Note: -b must be integer
+                                      
+  -m [min cell number for a cell type, default 100.]
+                                      
+  -f [sample fraction, default 0.8. The bootstrap fraction.]
+                                      
+  -l [loop number, default 100. The number of iterations for bootstrap.]
+                                      
+  -s [spatial key in obsm, default 'spatial']
+                                      
+  -a [annotation key in obs, default 'annotation']
 
 Reference
 ========================================
