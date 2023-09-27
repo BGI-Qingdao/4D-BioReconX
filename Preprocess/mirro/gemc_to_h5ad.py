@@ -2,7 +2,7 @@ import sys
 import time
 import getopt
 from scipy.sparse import csr_matrix
-from gemtk.slice_dataframe import slice_dataframe
+from slice_dataframe import slice_dataframe
 import anndata as ad
 import pandas as pd
 import numpy as np
@@ -11,7 +11,7 @@ from anndata import AnnData
 # usage
 def gemc_to_h5ad_usage():
     print("""
-Usage : GEM_toolkit.py gemc_to_h5ad  -i <xxx.gemc>  \\
+Usage : MIRROR.py gemc_to_h5ad  -i <xxx.gemc>  \\
                                      -o <prefix> \\
                                      -m [xxx.cellmask]
 """)

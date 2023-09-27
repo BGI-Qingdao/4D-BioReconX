@@ -382,7 +382,7 @@ def correct_all(heatmap_file,dapi_file,width_scale,height_scale,affine,prefix,ta
 # usage
 def secondregistration_usage():
     print("""
-Usage : GEM_toolkit.py second_registration \\
+Usage : MIRROR.py second_registration \\
                  -H <heatmap.trackline.tif/png>  \\
                  -d <ssDNA.trackline.tif/png> \\
                  -o <output prefix> \\

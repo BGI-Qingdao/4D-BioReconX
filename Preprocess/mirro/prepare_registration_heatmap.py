@@ -5,7 +5,7 @@ import numpy as np
 import scipy.ndimage as nd
 from skimage import io as skio
 from skimage import exposure
-from gemtk.slice_dataframe import slice_dataframe
+from slice_dataframe import slice_dataframe
 
 ###############################################################################
 # basic chip settings
@@ -123,7 +123,7 @@ def get_mask_rna(gem_file : str , chip:str ,prefix : str, eb5:str,draw_trackline
 # usage
 def prepareregistrationheatmap_usage():
     print("""
-Usage : GEM_toolkit.py prepare_registration_heatmap \\
+Usage : MIRROR.py prepare_registration_heatmap \\
              -g <gem file>  \\
              -o <output prefix> \\
              -c [chip715/chip500, default chip715] \\

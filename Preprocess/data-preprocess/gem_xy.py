@@ -1,7 +1,7 @@
 import sys
 import time
 import getopt
-from gemtk.slice_dataframe import slice_dataframe
+from slice_dataframe import slice_dataframe
 
 ############################################################################
 # section 15 : chopgems

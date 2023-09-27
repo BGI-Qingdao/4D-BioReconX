@@ -21,7 +21,7 @@ Image.MAX_IMAGE_PIXELS = None
 
 def gem_to_cfm_usage():
     print("""
-Usage : GEM_toolkit.py gem_to_gemc \\
+Usage : MIRROR.py gem_to_gemc \\
              -s <ssdna tif/png file> \\
              -g <gem file>  \\
              -b <cell segment outline file> \\

@@ -6,7 +6,7 @@ from skimage import io as skio
 import matplotlib.pyplot as plt
 from matplotlib import cm
 from matplotlib import colors
-from gemtk.slice_dataframe import format_colname
+from slice_dataframe import format_colname
 def heatmap_usage():
     print("""
 Usage : heatmap.py -i <input gem>
