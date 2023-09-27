@@ -8,5 +8,8 @@ This section introduces various methods to meet user-defined requirements, such 
 	:hidden: 
 	:maxdepth: 1
 	
-  adjust_body_axis
   assign_blastema_region
+
+.. nbgallery::
+  adjust_APDV_example
+  adjust_APML_example
