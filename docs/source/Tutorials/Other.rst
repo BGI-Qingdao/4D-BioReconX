@@ -3,7 +3,7 @@ Other modules
 
 This section introduces various methods to meet user-defined requirements, such as body straightening and blastema detection.
 
-.. toctree::
+.. nbsphinx-toctree::
 	:caption: Other modules
 	:hidden: 
 	:maxdepth: 1
