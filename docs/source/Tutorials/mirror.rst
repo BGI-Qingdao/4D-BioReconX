@@ -143,7 +143,7 @@ function: gem to mask gem if you only have all registration results
 function: ssdna to mask with specific manner
 
 5. -M mask.png -g gem.gem -a affine_matrix.txt -o output
-function: gem to mask gem only with a mask which make by yourself
+function: gem to mask gem only with a mask which is made by yourself
 
 gemc_to_h5ad
 ++++++++++++
