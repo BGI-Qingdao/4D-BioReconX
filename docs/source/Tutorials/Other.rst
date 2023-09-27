@@ -9,7 +9,5 @@ This section introduces various methods to meet user-defined requirements, such 
 	:maxdepth: 1
 	
   assign_blastema_region
-
-.. nbgallery::
   adjust_APDV_example
   adjust_APML_example
