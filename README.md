@@ -9,7 +9,9 @@
 
 <img src="https://github.com/BGI-Qingdao/4D-BioReconX/blob/main/docs/source/_static/4D-BioReconX_workflow_v1.0.0.jpg" width="100%" height="100%">
 
+
 [comment]: <> (![4D-BioReconX]&#40;./docs/source/_static/4D-BioReconX.PNG&#41;)
+
 
 **4D-BioReconX** is a scalable and versatile framework designed to construct a comprehensive four-dimensional (4D) spatial transcriptomics atlas of whole animals at single-cell resolution. This approach enables us to track the intricate spatiotemporal dependencies of morphogenetic gradients and regenerative patterning. It runs based on spatial transcriptomics data, such as Stereo-seq (spatial enhanced resolution omics sequencing) data. Notably, we are still working on the improvement of performance and calculation efficiency.
 
@@ -22,5 +24,3 @@ Please use GitHub [issues](https://github.com/BGI-Qingdao/4D-BioReconX/issues) t
 
 ## Contribution 
 **4D-BioReconX** is in a stage of rapid development so that we will carefully consider all aspects of your proposal. We hope future input will be given by both users and developers.
-
-Details to [contributing](https://4d-bioreconx.readthedocs.io/en/latest/content/05_Contributing.html).
