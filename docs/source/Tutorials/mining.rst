@@ -20,7 +20,7 @@ Calculating Spearman's rank correlation coefficient
   df = adata.to_df()
   target_genes = list(df.columns)  # or assigned by users
   with open('known_pcgs.txt', 'r') as f:
-  known_pcgs = f.read().splitlines()
+    known_pcgs = f.read().splitlines()
 
 Finding out more polarity-related genes
 ---------------------------------
@@ -34,7 +34,7 @@ Finding out more polarity-related genes
         df_data['gene'].append(gene)
         df_data['pcg'].append(pcg)
         scc = scipy.stats.spearmanr(df[gene], df[pcg]).correlation
-  df_data['scc'].append(scc)
+        df_data['scc'].append(scc)
 
 .. code-block:: python3
 
