@@ -58,7 +58,7 @@ Workflow
 
 .. toctree::
     :titlesonly:
-    :maxdepth: 3
+    :maxdepth: 4
     :hidden:
 
     content/00_Installation
