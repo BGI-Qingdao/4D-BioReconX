@@ -11,7 +11,7 @@ import scipy.ndimage as nd
 def apply_alignment_usage():
     print("""
 Usage :
-    GEM_toolkit.py apply_alignment -i <input.json or input.csv>
+    SEAM.py apply_alignment -i <input.json or input.csv>
                        -o <output prefix>
                        -W [the width of aligned image, default equal to input image]
                        -H [the height of aligned image, default equal to input image]

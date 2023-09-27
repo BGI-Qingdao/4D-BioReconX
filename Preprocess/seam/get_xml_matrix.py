@@ -7,7 +7,7 @@ import json
 #Usage
 def get_xml_matrix_usage():
     print("""
-Usage : get_xml_matrix.py -i <file.xml>
+Usage : SEAM.py get_xml_matrix -i <file.xml>
                           -o  <output>
     """,flush=True)
 
