@@ -11,25 +11,23 @@ Usage
 ========================================
 CellColocation.py 
 
-  -i <in.h5ad>
+================== ===========================================================
+optional arguments                description
+================== ===========================================================  
+-h, --help         show this help message and exit
+-i                 in.h5ad
+-o                 prefix
+-b                 binsize (for each slice), default 50 (refer to 50um if 1 unit=1um).
+-m                 min cell number for a cell type, default 100.                                  
+-f                 sample fraction, default 0.8. The bootstrap fraction.
+-l                 loop number, default 100. The number of iterations for bootstrap.
+-s                 spatial key in obsm, default 'spatial'
+-a                 annotation key in obs, default 'annotation'
+================== ===========================================================  
 
-  -o <prefix>
-
-  -b [binsize (for each slice), default 50 (refer to 50um if 1 unit=1um).]
+  Please set -b based on your coordinate system !!!
                                       
-                  Please set -b based on your coordinate system !!!
-                                      
-                  Note: -b must be integer
-                                      
-  -m [min cell number for a cell type, default 100.]
-                                      
-  -f [sample fraction, default 0.8. The bootstrap fraction.]
-                                      
-  -l [loop number, default 100. The number of iterations for bootstrap.]
-                                      
-  -s [spatial key in obsm, default 'spatial']
-                                      
-  -a [annotation key in obs, default 'annotation']
+  Note: -b must be integer
 
 Reference
 ========================================
