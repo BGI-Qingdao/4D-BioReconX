@@ -10,8 +10,11 @@ Image files, which usually in TIFF format, generated during the stereo-seq libra
 
 ## GEM and image preprocessing
 
+We provide flexible toolkit to process GEM file and ssDNA file.
+
+### main usage
 ```
-./GEM3D_toolkit.py
+./GEM3D_toolkit.py -h
 
 Usage : GEM_toolkit.py action [options]
 
@@ -21,7 +24,6 @@ Actions:
 
  Format coverting tools:
     gem_to_h5ad                   convert GEM into h5ad by a certain binsize.
-    gemc_to_h5ad                  convert GEMC into h5ad.
 
  Affine tools:
     affine_gem                    modify the 2D coordinate in GEM(C) by user-defined affine matrix.
@@ -53,4 +55,19 @@ Actions:
     -----------------------------------------------------------------
     -h/--help               show this short usage
 
+```
+
+### Action usage
+
+if your need action ```xxx```'s usage, please try ```./GEM3D_toolkit.py  xxx -h```
+
+for example:
+```
+ ./GEM3D_toolkit.py mask_gem -h
+
+Usage : GEM_toolkit.py maskgem -i <input.gem> \
+                               -m <mask.png>  \
+                               -o <output-folder> \
+                               -x [default None, xmin] \
+                               -y [default None, ymin]
 ```

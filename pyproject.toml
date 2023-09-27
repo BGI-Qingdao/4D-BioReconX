@@ -1,0 +1,16 @@
+[build-system]
+requires = [
+    "setuptools"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "4D-BioReconX"
+version = "1.0.0"
+authors = [
+    {name = "xumengyang", email = "xumengyang@genomics.cn"},
+]
+description = "A scalable and versatile framework designed to construct a comprehensive four-dimensional (4D) spatial transcriptomics atlas of whole animals at single-cell resolution."
+
+[tool.setuptools]
+packages = ["BIO", "Other", "PCG", "Preprocess"]

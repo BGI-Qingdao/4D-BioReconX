@@ -2,7 +2,7 @@ import sys
 import time
 import getopt
 from scipy.sparse import csr_matrix
-from gemtk.slice_dataframe import slice_dataframe
+from slice_dataframe import slice_dataframe
 import anndata as ad
 import pandas as pd
 import numpy as np

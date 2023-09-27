@@ -3,7 +3,7 @@ import time
 import getopt
 import anndata
 from skimage import io as skio
-from gemtk.h5ad_dataframe import h5ad_dataframe
+from h5ad_dataframe import h5ad_dataframe
 
 # usage
 def mask_h5ad_usage():

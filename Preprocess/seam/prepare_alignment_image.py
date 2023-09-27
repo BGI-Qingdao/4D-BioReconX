@@ -7,11 +7,11 @@ import getopt
 #Usage
 def prepare_alignment_image_usage():
     print(""""
-Usage : prepare_alignment_image.py -m <mask.txt>
+Usage : SEAM.py prepare_alignment_image -m <mask.txt>
                                    -o <output.png>
                                    -t <celltype.csv>
 
-Sample : prepare_alignment_image.py -m mask.txt \\
+Sample : SEAM.py prepare_alignment_image -m mask.txt \\
                                     -o output.png \\
                                     -t celltype.csv
 
