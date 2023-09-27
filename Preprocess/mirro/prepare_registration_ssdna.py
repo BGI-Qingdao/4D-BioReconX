@@ -72,7 +72,7 @@ def get_mask_dapi(dapi_file,min_brightness,width_pixel,height_pixel,chip,prefix,
 # usage
 def prepareregistrationdapi_usage():
     print("""
-Usage : GEM_toolkit.py prepare_registration_ssdna \\
+Usage : MIRROR.py prepare_registration_ssdna \\
              -d <ssdna tif/png file> \\
              -o <output prefix>  \\
              -c [chip500/chip715, default chip715] \\
