@@ -24,7 +24,6 @@ Actions:
 
  Format coverting tools:
     gem_to_h5ad                   convert GEM into h5ad by a certain binsize.
-    gemc_to_h5ad                  convert GEMC into h5ad.
 
  Affine tools:
     affine_gem                    modify the 2D coordinate in GEM(C) by user-defined affine matrix.
