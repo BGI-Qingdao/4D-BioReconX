@@ -72,7 +72,7 @@ html_theme_options = {
         "show_navbar_depth":0,
         "light_css_variables": {
         "color-brand-primary": "#003262",
-        "color-brand-content": "#003262",
+        "color-brand-content": "#005d62",
         "admonition-font-size": "var(--font-size-normal)",
         "admonition-title-font-size": "var(--font-size-normal)",
         "code-font-size": "var(--font-size--small)",
