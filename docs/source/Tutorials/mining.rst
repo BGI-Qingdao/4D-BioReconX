@@ -3,11 +3,10 @@
 PCG Mining Pipeline
 ========================================
 
-.. note:: 
 Find genes that could be PCGs by calculating and evaluating correlation coefficient values between known PCGs (from published studies) and target genes.
 
-A. Use Spearman's rank correlation coefficient
-===============================================
+Calculating Spearman's rank correlation coefficient
+---------------------------------
 
 .. code-block:: python3
 import scipy.stats
@@ -21,8 +20,8 @@ target_genes = list(df.columns)  # or assigned by users
 with open('known_pcgs.txt', 'r') as f:
     known_pcgs = f.read().splitlines()
 
-Spearman's rank correlation coefficient
-==============================================
+Finding out more polarity-related genes
+---------------------------------
 
 .. code-block:: python3
 df_data = {'gene':[], 'pcg':[], 'scc':[]}
