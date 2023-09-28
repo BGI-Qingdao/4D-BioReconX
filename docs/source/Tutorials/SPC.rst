@@ -82,7 +82,7 @@ Example workflow:
   spatial_plot(adata, color='annotation')
   
 .. image:: ../_static/spc_annotation.png
-    :alt: SPC Annotation
+    :alt: Annotation
     :width: 700px
     :align: center 
 
@@ -95,7 +95,7 @@ step1: first round of unsupervised clustering to generate cell attributes
   spatial_plot(adata, color='leiden')
   
 .. image:: ../_static/spc_leiden.png
-    :alt: SPC Leiden
+    :alt: Leiden
     :width: 700px
     :align: center 
 
@@ -109,20 +109,20 @@ perform spc non-continuous segmentation on original spc_adata and re-clustering 
   spc_adata.obs['leiden'] = adata.obs['leiden']
   spc_adata = spc.ncseg(spc_adata, celltype='leiden', meta_nCell=10, min_nCell=3)
 
- ... 0.02263174911089557 cells filtered for 0  
- ... 0.008573928258967628 cells filtered for 1  
- ... 0.018001125070316894 cells filtered for 2  
- ... 0.01702890432444544 cells filtered for 3  
- ... 0.03766963032288254 cells filtered for 4  
- ... 0.016137040714995034 cells filtered for 5  
- ... 0.01837270341207349 cells filtered for 6  
- ... 0.023353967360720315 cells filtered for 7  
- ... 0.02075187969924812 cells filtered for 8  
+ ... 0.02263174911089557   cells filtered for 0  
+ ... 0.008573928258967628  cells filtered for 1  
+ ... 0.018001125070316894  cells filtered for 2  
+ ... 0.01702890432444544   cells filtered for 3  
+ ... 0.03766963032288254   cells filtered for 4  
+ ... 0.016137040714995034  cells filtered for 5  
+ ... 0.01837270341207349   cells filtered for 6  
+ ... 0.023353967360720315  cells filtered for 7  
+ ... 0.02075187969924812   cells filtered for 8  
  ... 0.0036258158085569255 cells filtered for 9  
- ... 0.015986537652503154 cells filtered for 10  
- ... 0.013006503251625813 cells filtered for 11  
- ... 0.028044871794871796 cells filtered for 12  
- ... 0.05420560747663551 cells filtered for 13
+ ... 0.015986537652503154  cells filtered for 10  
+ ... 0.013006503251625813  cells filtered for 11  
+ ... 0.028044871794871796  cells filtered for 12  
+ ... 0.05420560747663551   cells filtered for 13
 
 step3: second round of unsupervised clustering on spc cells
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -165,15 +165,15 @@ visualization of SPC on deconvolved cells
 
   spatial_plot_deconv(spc_adata, cell2coords, color='leiden')
 
-.. image:: https://github.com/lskfs/SPC/blob/main/demo/leiden.spc.png
-    :alt: Title figure
+.. image:: ../_static/spc_leiden.spc.png
+    :alt: Leiden_SPC
     :width: 700px
     :align: center 
 
 After you finish all these steps, you can easily compare results from different clustering methods.
 
-.. image:: https://github.com/lskfs/SPC/blob/main/demo/compare.jpg
-    :alt: Title figure
+.. image:: ../_static/spc_compare.jpg
+    :alt: Comparison
     :width: 700px
     :align: center 
 
