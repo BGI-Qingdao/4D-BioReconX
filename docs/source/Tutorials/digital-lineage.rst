@@ -1,4 +1,4 @@
-Digital Lineage Tracing
+Digital Lineage Tracing Pipeline
 ==============
 
 This section introduces various methods to build a Sankey diagram for digital lineage tracing based on SPC.
