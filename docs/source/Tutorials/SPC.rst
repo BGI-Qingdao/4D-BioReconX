@@ -83,7 +83,7 @@ Example workflow:
   
 .. image:: ../_static/spc_annotation.png
     :alt: Annotation
-    :width: 700px
+    :width: 500px
     :align: center 
 
 step1: first round of unsupervised clustering to generate cell attributes
@@ -96,7 +96,7 @@ step1: first round of unsupervised clustering to generate cell attributes
   
 .. image:: ../_static/spc_leiden.png
     :alt: Leiden
-    :width: 700px
+    :width: 500px
     :align: center 
 
 step2: perform SPC non-continuous segmentation based on the first round leiden clusters
@@ -167,7 +167,7 @@ visualization of SPC on deconvolved cells
 
 .. image:: ../_static/spc_leiden.spc.png
     :alt: Leiden_SPC
-    :width: 700px
+    :width: 500px
     :align: center 
 
 After you finish all these steps, you can easily compare results from different clustering methods.
