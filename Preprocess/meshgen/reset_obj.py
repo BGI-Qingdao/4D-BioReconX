@@ -2,6 +2,13 @@ import os,sys,json
 import numpy as np
 import pandas as pd
 from io import StringIO
+def usage():
+    print("""
+Usage   : python3 reset_obj.py  < -i in.obj>
+                                 -o output prefix>
+                                [ -b binsize default 20]
+""")
+
 
 def MesheStr(objfile):
     mesh_str = ''
@@ -45,9 +52,43 @@ def add_mesh_str(objfile,binsize,outfile):
     vectors = vectors[['type','x','y','z']].copy()
     faces = faces[['type','x','y','z']].copy()
     obj_new = pd.concat([vectors,faces],ignore_index=True)
-    obj_new.to_csv(outfile,sep=' ',header=False,index=False)
+    obj_new.to_csv(f'{outfile}.obj',sep=' ',header=False,index=False)
 
-infile = sys.argv[1]
-outfile= sys.argv[2]
-binsize= int(sys.argv[3])
-add_mesh_str(infile,binsize,outfile)
+
+def main(argv):
+    ########################
+    # no args equal to -h
+    if len(argv) == 0 :
+        usage()
+        sys.exit(0)
+
+    ########################
+    # default values
+    inobj = ''
+    binsize = 20
+    prefix = ''
+    ########################
+    # parse args
+    try:
+        opts, args = getopt.getopt(argv,"hi:o:b:",["help"])
+    except getopt.GetoptError:
+        usage()
+        sys.exit(2)
+    for opt, arg in opts:
+        if opt in ("-h", "--help"):
+            usage()
+            sys.exit(0)
+        elif opt in ("-i" ):
+            inobj = arg
+        elif opt in ("-o" ):
+            prefix = arg
+        elif opt in ("-b" ):
+            binsize = int(arg)
+
+    add_mesh_str(inobj,binsize,prefix)
+
+
+if __name__ == "__main__":
+    main(sys.argv[1:])
+
+
