@@ -64,7 +64,7 @@ prepare_registration_ssdna
 Usage : MIRROR.py prepare_registration_ssdna 
 
 ===================== ================================================================================================
-argument             description
+argument              description
 ===================== ================================================================================================  
 -d                    ssdna tif/png file
 -o                    output prefix
@@ -81,7 +81,7 @@ second_registration
 Usage : MIRROR.py second_registration 
 
 ===================== ================================================================================================
-argument             description
+argument              description
 ===================== ================================================================================================  
 -H                    heatmap.trackline.tif/png
 -d                    ssDNA.trackline.tif/png
