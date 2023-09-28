@@ -63,5 +63,7 @@ Step 04
 ++++++++++++++++++++++++++++++++++++++++
 
 **plot the final sankey plot.**
-
-See our html for visualization codes and results!
+.. card:: Sankey Plot
+    :octicon:`book;1em;`
+    :link: digital-lineage-s4
+    :link-type: doc
