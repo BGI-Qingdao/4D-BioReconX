@@ -81,8 +81,8 @@ Example workflow:
 
   spatial_plot(adata, color='annotation')
   
-.. image:: https://github.com/lskfs/SPC/blob/main/demo/annotation.png
-    :alt: Title figure
+.. image:: ../_static/spc_annotation.png
+    :alt: SPC Annotation
     :width: 700px
     :align: center 
 
@@ -94,8 +94,8 @@ step1: first round of unsupervised clustering to generate cell attributes
   sc_pp(adata)
   spatial_plot(adata, color='leiden')
   
-.. image:: https://github.com/lskfs/SPC/blob/main/demo/leiden.png
-    :alt: Title figure
+.. image:: ../_static/spc_leiden.png
+    :alt: SPC Leiden
     :width: 700px
     :align: center 
 
