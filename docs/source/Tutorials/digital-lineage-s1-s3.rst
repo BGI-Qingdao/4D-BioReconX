@@ -1,6 +1,6 @@
 .. _`digital-lineage-`:
 ========================================
-Digital Lineage Tracing Pipeline
+Digital Lineage Tracing
 ========================================
 
 workflow
