@@ -8,7 +8,7 @@ based on both transcriptional similarity and spatial proximity, as well as downs
 .. toctree::
 	:caption: SPC analysis
 	:hidden: 
-	:maxdepth: 1
+	:maxdepth: 2
 	
   SPC
   CCC

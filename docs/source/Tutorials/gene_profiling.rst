@@ -22,7 +22,7 @@ usage: AP_Profiling [-h] -i INPUT -o OUTPUT [-m MIN_BIN] [-n NUM_HVG] [-b BIN_NU
 **Create AP Profiling for genes.**
 
 ================================= ===========================================================
-arguments                         description
+argument                          description
 ================================= ===========================================================
 -h, --help                        show this help message and exit
 -i INPUT, --input INPUT           the input adata, Notice: we expect raw count matrix!!!

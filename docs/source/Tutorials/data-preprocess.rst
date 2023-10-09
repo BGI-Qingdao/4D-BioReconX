@@ -3,7 +3,13 @@
 Stereo-seq data preprocessing
 ========================================
 
-Stereo-seq sequencing data were preprocessed using **SAW** (https://github.com/STOmics/SAW) to generate spatial gene expression matrices in **GEM** format (https://stereopy.readthedocs.io/en/latest/Tutorials/IO.html#GEM).
+Stereo-seq sequencing data were preprocessed using 
+
+**SAW** (https://github.com/STOmics/SAW) 
+
+to generate spatial gene expression matrices in 
+
+**GEM** format (https://stereopy.readthedocs.io/en/latest/Tutorials/IO.html#GEM).
 
 Image files, which are usually in **TIFF** format, generated during the stereo-seq library construction process should be ready for further process together with the GEM files.
 
@@ -21,8 +27,9 @@ We provide a flexible toolkit to process GEM and ssDNA files.
 main usage
 ++++++++++++
 
-.. code-block:: python3                                                                                                                                          
-python3 GEM3D_toolkit.py -h
+.. code-block:: python3
+
+  python3 GEM3D_toolkit.py -h
 
 Usage : GEM_toolkit.py action [options]
 
@@ -31,16 +38,18 @@ Actions
 
 Format converting tools
 ************************************       
+
 ===================== ================================================================================================
-arguments             description
+argument              description
 ===================== ================================================================================================   
 gem_to_h5ad           convert GEM into h5ad by a certain binsize.
 ===================== ================================================================================================   
 
 Affine tools
-************************************                                                                       
+************************************            
+
 ===================== ================================================================================================
-arguments             description
+argument              description
 ===================== ================================================================================================   
 affine_gem            modify the 2D coordinate in GEM(C) by user-defined affine matrix.                                                                    
 affine_h5ad           modify the 2D coordinate in GEM(C) by user-defined affine matrix.
@@ -52,8 +61,9 @@ apply_cells           add cells column to gem based on registered mask file.
 
 Region of interest (ROI) tools
 ************************************
+
 ===================== ================================================================================================
-arguments             description
+argument              description
 ===================== ================================================================================================                                             
 chop_image            chop region of interests from whole image.                                                                           
 chop_gem              chop region of interests from GEM(C).
@@ -61,8 +71,9 @@ chop_gem              chop region of interests from GEM(C).
 
 Mask tools
 ************************************
+
 ===================== ================================================================================================
-arguments             description
+argument              description
 ===================== ================================================================================================                                            
 mask_gem              mask GEM(C) by mask image.                                                                 
 mask_h5ad             mask h5ad data by mask image.
@@ -70,8 +81,9 @@ mask_h5ad             mask h5ad data by mask image.
 
 Visualization tools
 ************************************
+
 ===================== ================================================================================================
-arguments             description
+argument              description
 ===================== ================================================================================================
 draw_heatmap          draw heatmap of expression counts in bin1 resolution with/without cellbin and with/without ssDNA.
 image_blend           merge image(like heatmap/annotation image) with ssDNA and border image
@@ -79,8 +91,9 @@ image_blend           merge image(like heatmap/annotation image) with ssDNA and 
 
 Other tools
 ************************************
+
 ===================== ===============================================================================
-arguments             description
+argument              description
 ===================== ===============================================================================
 chop_paste            chop or paste ssDNA image. This tool is useful for ultra-large ssDNA image.   
 trakEM2_to_affine     covert trakEM2_matrix to standart affine matrix.                                                                         
@@ -95,11 +108,13 @@ Action usage
 if your need action **xxx**'s usage, please try **./GEM3D_toolkit.py  xxx -h**
 
 for example:
+
 .. code-block:: python3                                                                   
-python3 GEM3D_toolkit.py mask_gem -h
+
+  python3 GEM3D_toolkit.py mask_gem -h
 
 =================== ===========================================================
-arguments           description
+argument            description
 =================== ===========================================================
 -i                  input.gem
 -m                  mask.png  

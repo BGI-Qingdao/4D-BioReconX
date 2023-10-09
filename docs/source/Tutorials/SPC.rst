@@ -18,31 +18,35 @@ The main workflow of SPC including:
 
 Example workflow:
 ---------------------------------
+
 **preparation**
 
 .. code-block:: python3
-import matplotlib.pyplot as plt
-import anndata
-import scanpy as sc
-import spc
+
+  import matplotlib.pyplot as plt
+  import anndata
+  import scanpy as sc
+  import spc
 
 **plot function to show annotation or clustering results on spatial**
 
-.. code-block:: python3  
-def spatial_plot(adata, color='annotation'):
-  x, y = zip(*adata.obsm['spatial'])
-  annotations = adata.obs[color].unique()     
-  colors = spc.colors[:len(annotations)]
-  color_dict = dict((anno, color) for anno, color in zip(annotations, colors))
-  c = [color_dict[anno] for anno in adata.obs[color]]
-  plt.scatter(x, y, s=1, c=c, lw=0, edgecolors='none')
-  plt.gca().set_aspect('equal')
-  plt.show()
+.. code-block:: python3
+
+  def spatial_plot(adata, color='annotation'):
+    x, y = zip(*adata.obsm['spatial'])
+    annotations = adata.obs[color].unique()     
+    colors = spc.colors[:len(annotations)]
+    color_dict = dict((anno, color) for anno, color in zip(annotations, colors))
+    c = [color_dict[anno] for anno in adata.obs[color]]
+    plt.scatter(x, y, s=1, c=c, lw=0, edgecolors='none')
+    plt.gca().set_aspect('equal')
+    plt.show()
 
 **process function to cluster spatial data**
 
 .. code-block:: python3
-def sc_pp(adata):
+
+  def sc_pp(adata):
     sc.pp.normalize_total(adata)
     sc.pp.log1p(adata)
     sc.pp.highly_variable_genes(adata)
@@ -55,8 +59,8 @@ def sc_pp(adata):
 **read in example data and make a copy for spc process**
 
 .. code-block:: python3
-adata = anndata.read('mousebrain_cellbin.h5ad')
 
+  adata = anndata.read('mousebrain_cellbin.h5ad')
   AnnData object with n_obs × n_vars = 50140 × 25879  
   &emsp;&emsp;obs: 'annotation'  
   &emsp;&emsp;var: 'Gene'  
@@ -64,77 +68,85 @@ adata = anndata.read('mousebrain_cellbin.h5ad')
   &emsp;&emsp;obsm: 'spatial'  
   &emsp;&emsp;layers: 'counts'  
   
-.. code-block:: python3  
-adata.X = adata.layers['counts']
-adata.obs[['x', 'y']] = adata.obsm['spatial']
-cell2coords = adata.obs[['x', 'y']].copy()
-spc_adata = adata.copy()
+.. code-block:: python3
+
+  adata.X = adata.layers['counts']
+  adata.obs[['x', 'y']] = adata.obsm['spatial']
+  cell2coords = adata.obs[['x', 'y']].copy()
+  spc_adata = adata.copy()
 
 **view the original annotated celltype on spatial**
 
 .. code-block:: python3
-spatial_plot(adata, color='annotation')
+
+  spatial_plot(adata, color='annotation')
   
-.. image:: https://github.com/lskfs/SPC/blob/main/demo/annotation.png
-    :alt: Title figure
-    :width: 700px
+.. image:: ../_static/spc_annotation.png
+    :alt: Annotation
+    :width: 500px
     :align: center 
 
 step1: first round of unsupervised clustering to generate cell attributes
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 .. code-block:: python3 
-sc_pp(adata)
-spatial_plot(adata, color='leiden')
+
+  sc_pp(adata)
+  spatial_plot(adata, color='leiden')
   
-.. image:: https://github.com/lskfs/SPC/blob/main/demo/leiden.png
-    :alt: Title figure
-    :width: 700px
+.. image:: ../_static/spc_leiden.png
+    :alt: Leiden
+    :width: 500px
     :align: center 
 
 step2: perform SPC non-continuous segmentation based on the first round leiden clusters
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 perform spc non-continuous segmentation on original spc_adata and re-clustering on spc
 
 .. code-block:: python3 
-spc_adata.obs['leiden'] = adata.obs['leiden']
-spc_adata = spc.ncseg(spc_adata, celltype='leiden', meta_nCell=10, min_nCell=3)
 
- ... 0.02263174911089557 cells filtered for 0  
- ... 0.008573928258967628 cells filtered for 1  
- ... 0.018001125070316894 cells filtered for 2  
- ... 0.01702890432444544 cells filtered for 3  
- ... 0.03766963032288254 cells filtered for 4  
- ... 0.016137040714995034 cells filtered for 5  
- ... 0.01837270341207349 cells filtered for 6  
- ... 0.023353967360720315 cells filtered for 7  
- ... 0.02075187969924812 cells filtered for 8  
+  spc_adata.obs['leiden'] = adata.obs['leiden']
+  spc_adata = spc.ncseg(spc_adata, celltype='leiden', meta_nCell=10, min_nCell=3)
+
+ ... 0.02263174911089557   cells filtered for 0  
+ ... 0.008573928258967628  cells filtered for 1  
+ ... 0.018001125070316894  cells filtered for 2  
+ ... 0.01702890432444544   cells filtered for 3  
+ ... 0.03766963032288254   cells filtered for 4  
+ ... 0.016137040714995034  cells filtered for 5  
+ ... 0.01837270341207349   cells filtered for 6  
+ ... 0.023353967360720315  cells filtered for 7  
+ ... 0.02075187969924812   cells filtered for 8  
  ... 0.0036258158085569255 cells filtered for 9  
- ... 0.015986537652503154 cells filtered for 10  
- ... 0.013006503251625813 cells filtered for 11  
- ... 0.028044871794871796 cells filtered for 12  
- ... 0.05420560747663551 cells filtered for 13
+ ... 0.015986537652503154  cells filtered for 10  
+ ... 0.013006503251625813  cells filtered for 11  
+ ... 0.028044871794871796  cells filtered for 12  
+ ... 0.05420560747663551   cells filtered for 13
 
 step3: second round of unsupervised clustering on spc cells
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. code-block:: python3 
-sc_pp(spc_adata)
-spc_adata
 
- AnnData object with n_obs × n_vars = 5535 × 25879  
- &emsp;&emsp;obs: 'leiden', 'cell_number', 'hood', 'x', 'y', 'min_radius', 'max_radius'  
- &emsp;&emsp;var: 'Gene', 'highly_variable', 'means', 'dispersions', 'dispersions_norm', 'mean', 'std'  
- &emsp;&emsp;uns: 'hvg', 'leiden', 'log1p', 'neighbors', 'pca', 'umap'  
- &emsp;&emsp;obsm: 'X_pca', 'X_umap'  
- &emsp;&emsp;varm: 'PCs'  
- &emsp;&emsp;layers: 'counts'  
- &emsp;&emsp;obsp: 'connectivities', 'distances'  
+.. code-block:: python3
+
+  sc_pp(spc_adata)
+  spc_adata
+   AnnData object with n_obs × n_vars = 5535 × 25879  
+   &emsp;&emsp;obs: 'leiden', 'cell_number', 'hood', 'x', 'y', 'min_radius', 'max_radius'  
+   &emsp;&emsp;var: 'Gene', 'highly_variable', 'means', 'dispersions', 'dispersions_norm', 'mean', 'std'  
+   &emsp;&emsp;uns: 'hvg', 'leiden', 'log1p', 'neighbors', 'pca', 'umap'  
+   &emsp;&emsp;obsm: 'X_pca', 'X_umap'  
+   &emsp;&emsp;varm: 'PCs'  
+   &emsp;&emsp;layers: 'counts'  
+   &emsp;&emsp;obsp: 'connectivities', 'distances'  
 
 visualization of SPC on deconvolved cells
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. code-block:: python3 
-plot function to show SPC clustering results
-def spatial_plot_deconv(adata, cell2coords, color='annotation'):
+.. code-block:: python3
+
+  plot function to show SPC clustering results
+  def spatial_plot_deconv(adata, cell2coords, color='annotation'):
     obs = adata.obs[['hood', color]].copy()
     obs['hood'] = obs['hood'].str.split(',')
     obs = obs.explode('hood').set_index('hood')
@@ -150,17 +162,18 @@ def spatial_plot_deconv(adata, cell2coords, color='annotation'):
     plt.show()
 
 .. code-block:: python3 
-spatial_plot_deconv(spc_adata, cell2coords, color='leiden')
 
-.. image:: https://github.com/lskfs/SPC/blob/main/demo/leiden.spc.png
-    :alt: Title figure
-    :width: 700px
+  spatial_plot_deconv(spc_adata, cell2coords, color='leiden')
+
+.. image:: ../_static/spc_leiden.spc.png
+    :alt: Leiden_SPC
+    :width: 500px
     :align: center 
 
 After you finish all these steps, you can easily compare results from different clustering methods.
 
-.. image:: https://github.com/lskfs/SPC/blob/main/demo/compare.jpg
-    :alt: Title figure
+.. image:: ../_static/spc_compare.jpg
+    :alt: Comparison
     :width: 700px
     :align: center 
 

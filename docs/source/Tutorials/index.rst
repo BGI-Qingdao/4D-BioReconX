@@ -1,7 +1,6 @@
 Tutorials
 ============
-This section consists of various cases which will make you familiar with the process of 
-main analyses.
+This section consists of various cases which will make you familiar with the process of main analyses.
 
 .. card:: WACCA
     :octicon:`book;1em;`

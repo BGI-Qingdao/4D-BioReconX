@@ -5,6 +5,39 @@
 
 ## usage
 
+### gen stacked tif 
 
+```
+Usage   : python3 gen_stacked_tif.py < -i mask.lst>
+                                     < -a anno.txt>
+                                     < -o output prefix>
+                                     [ -b binsize default 20]
 
+```
+* mask.lst example
+
+the first column is z value ( must start from 0 ),the second column is cellbin mask file
+```
+0 s0.mask
+1 s1.mask
+...
+n sn.mask
+```
+
+* anno.txt example
+
+```
+slice_id,cell_id,anno_id
+1,11,1
+2,12,2
+```
+the slice id start from 1
+
+### reset obj
+
+```
+Usage   : python3 reset_obj.py  < -i in.obj>
+                                 -o output prefix>
+                                [ -b binsize default 20]
+```
 

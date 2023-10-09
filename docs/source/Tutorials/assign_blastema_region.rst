@@ -43,7 +43,8 @@ assign region to each cell
 ++++++++++++++++++++++++++++++++++++
 
 .. code-block:: python3
-python3 BlastemaByWound_v2.py
+
+    python3 BlastemaByWound_v2.py
 
 ===================== ================================================================================================
 arguments             description
