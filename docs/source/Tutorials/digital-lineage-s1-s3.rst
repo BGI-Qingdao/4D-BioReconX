@@ -34,7 +34,7 @@ example of in.lst
 and we will load time0.h5ad, time1.h5ad, time2.h5ad, time3.h5ad.
 
 
-Step 02:
+Step 02
 ++++++++++++++++++++++++++++++++++++++++
 
 **for each pair of time points, calculate the mapping number of cells for all clusters.**
