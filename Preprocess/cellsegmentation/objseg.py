@@ -10,6 +10,14 @@ import numpy as np
 import pandas as pd
 import cv2
 
+import bioformats.formatreader
+import cellprofiler_core.pipeline
+import cellprofiler_core.preferences
+import cellprofiler_core.utilities.zmq
+import cellprofiler_core.utilities.java
+#from cellprofiler_core.setting.subscriber import LabelSubscriber
+#from cellprofiler_core.setting.range import IntegerRange
+
 def _clahe(image):
 
     #-----Reading the image-----------------------------------------------------
@@ -36,7 +44,7 @@ def _clahe(image):
     #return cl
     return final
 
-def clahe(image, iter=5):
+def clahe(image, iter=5, return_gray=True):
     """
     Enhance local contrast with CLAHE algorithm
     
@@ -50,6 +58,9 @@ def clahe(image, iter=5):
     while iter:
         image = _clahe(image)
         iter -= 1
+    if return_gray:
+        image = np.dot(image[..., :3], [0.2989, 0.5870, 0.1140])
+        image = image.astype(int)
     return image
 
 def blur_detect(image, channel='g', chunk_size=3, method='laplacian', top_svd=30, 
@@ -123,6 +134,7 @@ def blur_detect(image, channel='g', chunk_size=3, method='laplacian', top_svd=30
 
 def _pycellprofilter(image, name='DNA', cpi=None, saved_object='IdentifySecondaryObjects'):
 
+    print(cellprofiler_core.preferences.__is_headless)
     # load pipeline from cpi file
     print('load pipeline from {}'.format(cpi))
     pipeline = cellprofiler_core.pipeline.Pipeline()
@@ -133,8 +145,10 @@ def _pycellprofilter(image, name='DNA', cpi=None, saved_object='IdentifySecondar
 
     # setup image_set
     image_set = cellprofiler_core.image.ImageSet(0, {'name':name}, name)
-    #x = skimage.io.imread(image, as_gray=True)
-    x = cv2.imread(str(image), 0)
+    if isinstance(image, np.ndarray) and len(image.shape) == 2:
+        x = image
+    else:
+        x = cv2.imread(str(image), 0)
     x[x > 230] = 230
     image_x = cellprofiler_core.image.Image(x, path_name=image.parent, file_name=image.name)
     image_set.add(name, image_x)
@@ -146,8 +160,8 @@ def _pycellprofilter(image, name='DNA', cpi=None, saved_object='IdentifySecondar
 
     workspace = cellprofiler_core.workspace.Workspace(
             pipeline, 
-            modules,
-            image_set,
+            modules, 
+            image_set, 
             object_set,
             measurements,
             [image_set]
@@ -166,25 +180,19 @@ def _pycellprofilter(image, name='DNA', cpi=None, saved_object='IdentifySecondar
 
     return objects, celloutlines
 
-def pycellprofiler(image, mask, save_prefix='test', img_boundary=True,
+def pycellprofiler(image, save_prefix=None, return_image=True,
         cpi='./default.cppipe', 
+        image_name='DNA',
         saved_object='IdentifySecondaryObjects',
         outdir='./outdir', tmpdir='./tmpdir', ):
 
     outdir, tmpdir = Path(outdir), Path(tmpdir)
     if not outdir.exists():
         outdir.mkdir(parents=True, exist_ok=True)
-    
-    import bioformats.formatreader
-    import cellprofiler_core.pipeline
-    import cellprofiler_core.preferences
-    import cellprofiler_core.utilities.zmq
-    import cellprofiler_core.utilities.java
-    from cellprofiler_core.setting.subscriber import LabelSubscriber
-    from cellprofiler_core.setting.range import IntegerRange
-    
+
+    objects = None
     try:
-        cellprofiler_core.preferences.set_headless()
+        #cellprofiler_core.preferences.set_headless()
         cellprofiler_core.preferences.set_temporary_directory(outdir)
         cellprofiler_core.preferences.set_default_output_directory(outdir)
 
@@ -205,23 +213,24 @@ def pycellprofiler(image, mask, save_prefix='test', img_boundary=True,
         bioformats.formatreader.clear_image_reader_cache()
         cellprofiler_core.utilities.java.stop_java()
 
+    if objects is None:
+        return
     sys.stdout.write('Saving labled cells ...\n')
 
     mask = objects.segmented
     b, g, r = cv2.split(celloutlines.pixel_data)
-    if save_prefix:
-        mask_file = str(outdir / f'{prefix}_mask.txt')
+    if save_prefix is not None:
+        mask_file = str(outdir / f'{save_prefix}_mask.txt')
         np.savetxt(mask_file, mask, fmt='%d')
 
-        boundary_file = str(outdir / f'{prefix}_boundary.txt')
+        boundary_file = str(outdir / f'{save_prefix}_boundary.txt')
         np.savetxt(boundary_file, b, fmt='%d')
     
-    if img_boundary:
-        image = img_outliner(image, boundary=b, 
-                    save=f'{prefix}.celloutlines.png'
-                    )
-    
-    return mask, b
+    if return_image:
+        image = img_outliner(image, boundary=b)
+        return mask, b, image
+    else:
+        return mask, b
 
 def boundary_detect(mask, image, save_prefix='cell'):
     import skimage.segmentation

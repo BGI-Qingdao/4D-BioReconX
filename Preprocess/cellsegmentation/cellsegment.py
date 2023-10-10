@@ -16,6 +16,7 @@ from cellprofiler_core.setting.range import IntegerRange
 
 def _pycellprofilter(image, name='DNA', cpi=None, saved_object='IdentifySecondaryObjects'):
 
+    print(cellprofiler_core.preferences.__is_headless)
     # load pipeline from cpi file
     print('load pipeline from {}'.format(cpi))
     pipeline = cellprofiler_core.pipeline.Pipeline()
@@ -83,8 +84,8 @@ def pycellprofiler(image, mask, save_prefix='test', img_boundary=True,
                 saved_object=saved_object
                 )
         sys.stdout.write('Cell objects and outlines generated\n')
-    except Exception as err:
-        sys.stderr.write('***Error: {}\n'.format(err))
+    #except Exception as err:
+    #    sys.stderr.write('***Error: {}\n'.format(err))
     finally:
         cellprofiler_core.utilities.zmq.join_to_the_boundary()
         bioformats.formatreader.clear_image_reader_cache()
