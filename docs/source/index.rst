@@ -34,7 +34,7 @@ It runs based on spatial transcriptomics data, such as Stereo-seq (spatial enhan
 Notably, we are still working on the improvement of performance and calculation efficiency.
 
 
-* Get quickly started by browsing `Usage Principles <https://4d-bioreconx.readthedocs.io/en/latest/index.html>`_, `Tutorials <https://4d-bioreconx.readthedocs.io/en/latest/Tutorials/Cases.html>`_ or `API <https://4d-bioreconx.readthedocs.io/en/latest/content/03_API.html>`_.
+* Get quickly started by browsing `Installation <https://4d-bioreconx.readthedocs.io/en/latest/content/00_Installation.html>`_, `Basic Usage <https://4d-bioreconx.readthedocs.io/en/latest/content/01_Basic_Usage.html>`_ or `Tutorials <https://4d-bioreconx.readthedocs.io/en/latest/Tutorials/index.html>`_.
 * Open to discuss and provide feedback on `Github <https://github.com/BGI-Qingdao/4D-BioReconX>`_.
 * Follow changes in `Release Notes <https://4d-bioreconx.readthedocs.io/en/latest/content/06_Release_notes.html>`_.
 
