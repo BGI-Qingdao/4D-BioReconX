@@ -59,7 +59,11 @@ def cal_component(niche, group_col):
     df['percentage'] = df['counts'] / df['counts'].sum()
     return df
 
-def cal_2d_density(df, group_col, groups=None, min_num=50, save_figure='out.pdf'):
+def cal_2d_density(df, group_col, groups=None, 
+                   min_num=50, radius=15, 
+                   cmap='RdGy_r', 
+                   figsize=None, save_figure=None,
+                   ):
     """calculate density for each group
 
     Parameters
@@ -68,10 +72,12 @@ def cal_2d_density(df, group_col, groups=None, min_num=50, save_figure='out.pdf'
         dataframe contain reformed niche information
     group_col: str
         column name used as group information
+    groups: list
+        list of groups which to use
     min_num: int
         minimal number used for calculcation
-    save_figure: str
-        figure file name
+    save_figure: str, None
+        figure file name, default None to show the figure
     """
     import numpy as np
     from scipy import stats
@@ -104,7 +110,12 @@ def cal_2d_density(df, group_col, groups=None, min_num=50, save_figure='out.pdf'
     
     _min_lim, _max_lim = 75, 225
     ncols = 6
-    nrows = len(data) / ncols
+    nrows = len(data) // ncols
+    if len(data) % ncols > 0:
+        nrows += 1
+    
+    if figsize is None:
+        figsize = (3 * ncols, 3 * nrows)
 
     plt.style.use('dark_background')
     fig, axes = plt.subplots(nrows, ncols, figsize=figsize, sharex=True, sharey=True)
@@ -121,22 +132,26 @@ def cal_2d_density(df, group_col, groups=None, min_num=50, save_figure='out.pdf'
             linestyles='dashed'
         )
 
-        *d2 = contours.find_nearest_contour(0, 0, pixel=False)
+        *_, d2 = contours.find_nearest_contour(0, 0, pixel=False)
 
         ax.plot(0, 0, '+b')
         circle = plt.Circle((0, 0), 5, color='k', ls='--', lw=0.5, fill=False)
         ax.add_patch(circle)
-        ax.imshow(Z, entent=[-15, 15, -15, 15], origin='lower', 
-                  cmap='RdGy_r', alpha=1, vmin=0, vmax=0.0025)
-        ax.text(10, 10, name)
-        ax.text(5, 5, ds)
+        ax.imshow(Z, extent=[-radius, radius, -radius, radius], origin='lower', 
+                  cmap=cmap, alpha=1, vmin=0, vmax=0.0025)
+        ax.text(14, 12, name, ha='right')
+        ax.text(14, 10, f'{d2:.2f}', ha='right')
 
         results.append([name, _count, _max, d2])
-    fig.savefig(save_figure)
+    if save_figure:
+        fig.savefig(save_figure)
+    else:
+        fig.show()
 
     colnames = ['group', 'count', 'max_dens', 'nearest_dist']
     results = pd.DataFrame(results, columns=colnames)
     results = results.sort_values(['count', 'nearest_dist', 'max_dens'], 
                     ascending=[False, True, False])
+
     return results
 

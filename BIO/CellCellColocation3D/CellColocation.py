@@ -252,9 +252,9 @@ if __name__ == '__main__':
         elif opt in ('-l'):
             bootnum = int(arg)
         elif opt in ('-s'):
-            spatial_key = opt
+            spatial_key = arg
         elif opt in ('-a'):
-            anno_key = opt
+            anno_key = arg
 
     # sanity check
     if in_h5ad_file == '' or prefix == '' or \
