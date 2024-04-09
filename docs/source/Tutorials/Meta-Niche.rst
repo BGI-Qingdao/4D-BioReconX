@@ -1,7 +1,6 @@
-.. _`Meta-Niche`:
-========================================
-Meta-Niche pipeline
-========================================
+Meta-Niche ==============
 
-Meta-Niche pipeline aims to generate Meta-Niche based on SPC.
+This section aims to generate Meta-Niche based on SPC.
+
+calculate-niches-on-coords
 
