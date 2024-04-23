@@ -3,10 +3,10 @@ To investigate spatial patterns of gene expression capture positional gradients,
 
 This section mainly contains:
 
-* [PCG Gene Profiling](#pcg-gene-profiling)
-* [Clustering](#clustering)
+* [PCG Gene Profiling](#pcgprofiling)
+* [Pattern Clustering](#patternclustering)
 * [PCA](#pca)
-* [PCG Mining](#pcg-mining)
+* [New PCG Mining](#newpcgmining)
 <p align="center">
     <img src="../docs/source/_static/fig.png" width=300 height=600>
 </p>
@@ -35,7 +35,7 @@ optional arguments:
 Best wishes
 ```
 
-## Clustering
+## Pattern Clustering
 Then, perform clustering via `hdbscan` and `LogicRegression`.
 ```
 from pcg_pattern import *
@@ -93,7 +93,7 @@ example:
       python pca.py -i total.csv -t WT.csv -g filtered_gene.txt -p pcg.txt -c pcg_class.txt -n test_WT -s symbols.txt
 ```
 
-## PCG Mining
+## New PCG Mining
 Find genes that could be PCGs by calculating and evaluating correlation coefficient values between known PCGs (from published studies) and target genes.
 ```
 # A. Use Spearman's rank correlation coefficient
