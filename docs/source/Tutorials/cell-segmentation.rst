@@ -1,5 +1,7 @@
 .. _`cell-segmentation`:
 
-========================================
-Cell segmentation Pipeline
-========================================
+This section aims to detect cell boundaries based on ssDNA images.
+
+.. nbgallery::
+
+ cell-segmente-on-ssDNA
