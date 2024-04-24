@@ -1,5 +1,4 @@
-cell-segmentation
-==============
+Cell Segmentation ==============
 
 This section aims to detect cell boundaries based on ssDNA images.
 
