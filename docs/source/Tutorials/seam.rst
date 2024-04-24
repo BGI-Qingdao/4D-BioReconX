@@ -92,8 +92,8 @@ argument              description
 ===================== ================================================================================================
 -i                    input.json or input.csv
 -o                    output prefix
--W                    the width of aligned image, default equal to input image
--H                    the height of the aligned image, default equal to input image
+-W                    the width of the aligned image, default equal to the input image
+-H                    the height of the aligned image, default equal to the input image
 -m                    True/False, merge all h5ad to one if True, default False
 -S                    True/False, add Sn to cell name if -m=True, default False
 ===================== ================================================================================================
