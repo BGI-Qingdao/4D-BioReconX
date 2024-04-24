@@ -7,7 +7,7 @@ This section contains a Whole-Animal reconstruction pipeline using 2D multimodal
 .. toctree::
 	:caption: WACCA
 	:hidden: 
-	:maxdepth: 1
+	:maxdepth: 2
 	
   data-preprocess
   mirror
