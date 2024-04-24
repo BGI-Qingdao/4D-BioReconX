@@ -44,7 +44,7 @@ Wei, R., He, S., Bai, S. et al. Spatial charting of single-cell transcriptomes i
 
 ### workflow
 
-* step01: for each pair of timepoint, a) calculate the similarity array for each pair of cells between those two datasets and b) save the closest cell in another dataset for every cell.
+* step01: for each pair of time points, a) calculate the similarity array for each pair of cells between those two datasets and b) save the closest cell in another dataset for every cell.
 
 
 ```
@@ -63,7 +63,7 @@ and we will load time0.h5ad, time1.h5ad, time2.h5ad, time3.h5ad.
 
 ```
 
-* step02: for each pair of timepoint, calculate the mapping number of cells for all clusters.
+* step02: for each pair of time points, calculate the mapping number of cells for all clusters.
 
 ```
 Usage: python3 s02.get_number_anno.py  <-i in.lst>
