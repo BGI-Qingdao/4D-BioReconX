@@ -3,10 +3,10 @@ To investigate spatial patterns of gene expression capture positional gradients,
 
 This section mainly contains:
 
-* [PCG Gene Profiling](#pcgprofiling)
-* [Pattern Clustering](#patternclustering)
-* [PCA](#pca)
-* [New PCG Mining](#newpcgmining)
+* [PCG Gene Profiling](./pcgprofiling)
+* [Pattern Clustering](./patternclustering)
+* [PCA](./pca)
+* [New PCG Mining](./newpcgmining)
 <p align="center">
     <img src="../docs/source/_static/fig.png" width=300 height=600>
 </p>
