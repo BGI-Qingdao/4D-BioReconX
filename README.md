@@ -29,6 +29,8 @@ Please use GitHub [issues](https://github.com/BGI-Qingdao/4D-BioReconX/issues) t
 ## File tree
 **To enhance clarity and prevent any potential confusion, we have organized this GitHub repository into a structured file tree, complete with detailed annotation for each code segment, tailored to their respective purposes.
 
+```
+
 .
 ├── LICENSE # MIT License
 ├── OtherModules    # Independent analysis modules for specifc requirements. Please see the README in each folder.
@@ -210,6 +212,8 @@ Please use GitHub [issues](https://github.com/BGI-Qingdao/4D-BioReconX/issues) t
 │   └── mappingtoplanarian.jpg  # Mapping relations.
 ├── pyproject.toml  # Readthedocs building.
 └── requirements.txt    # Installation requirements.
+
+```
 
 
 
