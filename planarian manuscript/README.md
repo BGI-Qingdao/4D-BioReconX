@@ -22,7 +22,6 @@
 <br clear="left"/>
 <br clear="left"/>
 
-
 ## Stereo-seq
 
 <img src='./_static/img/section.png' width=300 align='right' hspace='50' /> Each sample block was serially sectioned at 10 µm intervals throughtout the entire animal body. Each section was individually mounted onto the Stereo-seq chip. 
