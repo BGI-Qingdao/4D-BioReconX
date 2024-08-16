@@ -9,8 +9,7 @@ This section contains a Whole-Animal reconstruction pipeline using 2D multimodal
 	:hidden: 
 	:maxdepth: 2
 	
-  data-preprocess
   mirror
-  seam
   cell-segmentation
+  seam
   meshgen

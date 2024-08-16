@@ -1,6 +1,6 @@
 .. _`data-preprocess`:
 ========================================
-Stereo-seq data preprocessing
+Sampling Design and Data Organization
 ========================================
 
 Stereo-seq sequencing data were preprocessed using 
@@ -13,113 +13,38 @@ to generate spatial gene expression matrices in
 
 Image files, which are usually in **TIFF** format, generated during the stereo-seq library construction process should be ready for further process together with the GEM files.
 
+
+Sampling
+---------------------------------
+<img src='../_static/sampling design.png' width=300 align='right' hspace='50' />Planarian animals of one uninjured individual and 16 regenerative individuals from eight distinct stages were sampled.
+
+
+Sample fixation
+---------------------------------
+<img src='../_static/oct embedding.png' width=300 align='right' hspace='50' /> Individuals were embedded into two OCT blocks, of which relevant data were organized as two samples in [STOmicsDB](https://db.cngb.org/stomics/) database. 
+- [STSA0000254](https://db.cngb.org/stomics/sample/STSA0000254/)
+- [STSA0000255](https://db.cngb.org/stomics/sample/STSA0000255/)
+
+
+Stereo-seq
+---------------------------------
+<img src='../_static/section.png' width=300 align='right' hspace='50' /> Each sample block was serially sectioned at 10 µm intervals throughtout the entire animal body. Each section was individually mounted onto the Stereo-seq chip. 
+
+Sections on the chip were stained with nucleic acid dye for single-stranded DNA (ssDNA) visualization and further processed throughout library construction and sequencing. 
+
+
+Data preprocess
+---------------------------------
+Stereo-seq sequencing data were preprocessed using [SAW](https://github.com/STOmics/SAW) to generation spatial gene expression matrices in [GEM format](https://stereopy.readthedocs.io/en/latest/Tutorials/IO.html#GEM)
+
+Data of each section were packed with a sinlge **Tissue Section** ID in STOmicsDB database, including staining image *(.tif)*, GEM file *(.gem)* as well as relevant annotation information *(.txt)*.
+- [STTS0000461 - 515](https://db.cngb.org/stomics/project/STT0000028)
+
+
 Data availability
 ---------------------------------
 
 All data generated in this study were deposited at CNGB Nucleotide Sequence Archive (accession code: STT0000028).
 
-Processed data can be interactively explored from our PRISTA4D database (https://db.cngb.org/stomics/prista4d; https://www.bgiocean.com/planarian). 
-
-GEM and image preprocessing
----------------------------------
-We provide a flexible toolkit to process GEM and ssDNA files.
-
-main usage
-++++++++++++
-
-.. code-block:: python3
-
-  python3 GEM3D_toolkit.py -h
-
-Usage : GEM_toolkit.py action [options]
-
-Actions
-++++++++++++
-
-Format converting tools
-************************************       
-
-===================== ================================================================================================
-argument              description
-===================== ================================================================================================   
-gem_to_h5ad           convert GEM into h5ad by a certain binsize.
-===================== ================================================================================================   
-
-Affine tools
-************************************            
-
-===================== ================================================================================================
-argument              description
-===================== ================================================================================================   
-affine_gem            modify the 2D coordinate in GEM(C) by user-defined affine matrix.                                                                    
-affine_h5ad           modify the 2D coordinate in GEM(C) by user-defined affine matrix.
-affine_ssdna          affine the ssdna image by user-defined affine matrix.                           
-affine_txt            affine txt like cell.mask by user-defined affine matrix.               
-apply_registration    use registration result(with/without ROI) to update ssdna/mask/gem ...                                                           
-apply_cells           add cells column to gem based on registered mask file.
-===================== ================================================================================================   
-
-Region of interest (ROI) tools
-************************************
-
-===================== ================================================================================================
-argument              description
-===================== ================================================================================================                                             
-chop_image            chop region of interests from whole image.                                                                           
-chop_gem              chop region of interests from GEM(C).
-===================== ================================================================================================                                             
-
-Mask tools
-************************************
-
-===================== ================================================================================================
-argument              description
-===================== ================================================================================================                                            
-mask_gem              mask GEM(C) by mask image.                                                                 
-mask_h5ad             mask h5ad data by mask image.
-===================== ================================================================================================                                            
-
-Visualization tools
-************************************
-
-===================== ================================================================================================
-argument              description
-===================== ================================================================================================
-draw_heatmap          draw heatmap of expression counts in bin1 resolution with/without cellbin and with/without ssDNA.
-image_blend           merge image(like heatmap/annotation image) with ssDNA and border image
-===================== ================================================================================================
-
-Other tools
-************************************
-
-===================== ===============================================================================
-argument              description
-===================== ===============================================================================
-chop_paste            chop or paste ssDNA image. This tool is useful for ultra-large ssDNA image.   
-trakEM2_to_affine     covert trakEM2_matrix to standart affine matrix.                                                                         
-split_gem             split gem by x or y coordinate.                                                                        
-merge_h5ad            merge files of h5ad.                                                                    
-gem_xy                get xmin ymin of gem
--h/--help             show this short usage
-===================== ===============================================================================
-
-Action usage
-++++++++++++
-if your need action **xxx**'s usage, please try **./GEM3D_toolkit.py  xxx -h**
-
-for example:
-
-.. code-block:: python3                                                                   
-
-  python3 GEM3D_toolkit.py mask_gem -h
-
-=================== ===========================================================
-argument            description
-=================== ===========================================================
--i                  input.gem
--m                  mask.png  
--o                  output-folder
--x                  default None, xmin
--y                  default None, ymin
-=================== ===========================================================
+Processed data can be interactively explored from our PRISTA4D database (https://db.cngb.org/stomics/prista4d). 
 
