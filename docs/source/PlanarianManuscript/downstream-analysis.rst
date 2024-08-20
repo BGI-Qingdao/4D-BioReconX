@@ -10,10 +10,10 @@ SPC clustering
 
 Spatial gradient gene profiling
 -------------------------------
-Each 3D individual was digitally split into body fragments with equal length along A/P, M/L, and D/V axes, from which the gene expression of each fragment was calculated by averaging sctransform-based data following ::ref:`/tutorials/gene_profiling.rst`.
+Each 3D individual was digitally split into body fragments with equal length along A/P, M/L, and D/V axes, from which the gene expression of each fragment was calculated by averaging sctransform-based data following :ref:`/tutorials/gene_profiling.rst`.
 
 .. note:: 
-    The digitally split was performed after the body straightening following ::ref:`/tutorials/body_straightening.rst`.
+    The digitally split was performed after the body straightening following :ref:`/tutorials/body_straightening.rst`.
 
 Spatial pattern clustering
 --------------------------
