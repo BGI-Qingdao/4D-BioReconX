@@ -63,6 +63,7 @@ Workflow
     content/00_Installation
     content/01_Basic_Usage
     Tutorials/index
+    PlanarianManuscript/index
     content/03_References
     
 

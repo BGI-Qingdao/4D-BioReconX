@@ -2,13 +2,6 @@ Tutorials
 ============
 This section consists of various cases which will make you familiar with the process of main analyses.
 
-.. card:: Design and Data
-    :octicon:`book;1em;`
-    :link: Data
-    :link-type: doc
-
-    This section contains description of our sampling design and data organization in STOmicsDB.
-
 .. card:: WACCA
     :octicon:`book;1em;`
     :link: Preprocess
@@ -41,8 +34,7 @@ This section consists of various cases which will make you familiar with the pro
     :titlesonly:
     :maxdepth: 1
     :hidden:
-
-    Data
+    
     Preprocess
     BIO
     PCG
