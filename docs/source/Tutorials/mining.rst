@@ -1,6 +1,6 @@
 .. _`mining`:
 ========================================
-PCG Mining Pipeline
+Gradient correlation
 ========================================
 
 Find genes that could be PCGs by calculating and evaluating correlation coefficient values between known PCGs (from published studies) and target genes.

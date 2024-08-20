@@ -1,6 +1,6 @@
 .. _`gene_profiling`:
 ========================================
-PCG Gene Profiling Pipeline
+Gradient Gene Profiling
 ========================================
 
 The basic idea here is converting 3D data into 1D pseudoBulk data.To achieve this, \

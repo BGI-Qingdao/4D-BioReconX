@@ -1,6 +1,6 @@
 .. _`pca`:
 ========================================
-PCG PCA Pipeline
+PCG PCA
 ========================================
 
 PCG analysis in PCG PC space

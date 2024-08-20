@@ -1,6 +1,6 @@
 .. _`clustering`:
 ========================================
-PCG Clustering Pipeline
+Spatial pattern Clustering
 ========================================
 
 Perform clustering via `hdbscan` and `LogicRegression`

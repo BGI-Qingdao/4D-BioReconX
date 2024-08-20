@@ -10,6 +10,6 @@ Polarity analysis
 	:maxdepth: 1
 	
   gene_profiling
-  mining
   clustering
+  mining
   pca

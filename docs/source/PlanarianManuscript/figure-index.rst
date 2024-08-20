@@ -1,6 +1,6 @@
 .. _`figure-index`:
 ========================
-Figure index 
+Index 
 ========================
 This section gives a figure index to trace this code frame with the manuscript Methods.
 
