@@ -8,7 +8,7 @@ Sampling
 --------
 Planarian animals of one uninjured individual and 16 regenerative individuals from eight distinct stages were sampled.
 
-.. figure:: ../_static/sampling_design.png
+.. image:: ../_static/sampling_design.png
     :width: 300px
     :align: left
     :alt: sampling design
@@ -19,7 +19,7 @@ Individuals were embedded into two OCT blocks, of which relevant data were organ
   * `STSA0000254 <https://db.cngb.org/stomics/sample/STSA0000254/>`_
   * `STSA0000255 <https://db.cngb.org/stomics/sample/STSA0000255/>`_
 
-.. figure:: ../_static/oct_embedding.png
+.. image:: ../_static/oct_embedding.png
     :width: 300px
     :align: left
     :alt: oct embedding
@@ -28,7 +28,7 @@ Stereo-seq
 ----------
 Each sample block was serially sectioned at 10 µm intervals throughtout the entire animal body. Each section was individually mounted onto the Stereo-seq chip. 
 
-.. figure:: ../_static/section.png
+.. image:: ../_static/section.png
     :width: 300px
     :align: left
     :alt: section
