@@ -6,7 +6,7 @@ This section contains description of our sampling design and data organization i
 
 Sampling
 --------
-.. image:: ../_static/sampling design.png
+.. figure:: ../_static/sampling design.png
     :width: 300px
     :align: right
     :alt: sampling design
@@ -17,7 +17,7 @@ Planarian animals of one uninjured individual and 16 regenerative individuals fr
 
 Sample fixation
 ---------------
-.. image:: ../_static/oct embedding.png
+.. figure:: ../_static/oct embedding.png
     :width: 300px
     :align: right
     :alt: oct embedding
@@ -31,7 +31,7 @@ Individuals were embedded into two OCT blocks, of which relevant data were organ
 
 Stereo-seq
 ----------
-.. image:: ../_static/section.png
+.. figure:: ../_static/section.png
     :width: 300px
     :align: right
     :alt: section
