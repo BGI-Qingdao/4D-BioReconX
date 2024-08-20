@@ -37,5 +37,5 @@ Global spatial distribution similarity was estimated by KL in 3D coordinates fol
 
 Micro-environment estimation
 ----------------------------
-The composition of neighbor cells for neoblast in the 3D space was used to evaluate the microenvironment of neoblast in homeostasis and regeneration following :ref:`/tutorials/Meta-Niche.rst`.
+The composition of neighbor cells for neoblast in the 3D space was used to evaluate the microenvironment of neoblast in homeostasis and regeneration following :ref:`/tutorials/calculate-niches-on-coords.ipynb`.
 
