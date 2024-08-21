@@ -1,4 +1,32 @@
 .. _`downstream-analysis`:
+
+.. sidebar:: quick index
+
+	.. rubric:: SPC clustering
+	| `SPC <https://github.com/lskfs/SPC>`_: Spatial Proximity based Clustering ☀ 
+	| :ref:`/tutorials/spc.rst`
+
+	.. rubric:: Spatial gradient gene profiling
+	| ::ref:`/tutorials/gene_profiling.rst` 
+
+	.. rubric:: Spatial pattern clustering
+	| ::ref:`/tutorials/clustering.rst` 
+
+	.. rubric:: Potential PCGs detection
+	| ::ref:`/tutorials/mining.rst` 
+
+	.. rubric:: Principal component analysis of PCGs
+	| ::ref:`/tutorials/pca.rst` 
+
+	.. rubric:: Cell-cell connection analysis
+	| ::ref:`/tutorials/CCC.rst` 
+
+	.. rubric:: Cell colocation estimation
+	| ::ref:`/tutorials/CellCellColocation3D.rst` 
+
+	.. rubric:: Micro-environment estimation
+	| ::ref:`/tutorials/calculate-niches-on-coords.ipynb` 
+
 ======================
 Downstream Analysis
 ======================
