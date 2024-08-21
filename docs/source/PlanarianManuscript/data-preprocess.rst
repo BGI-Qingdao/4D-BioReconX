@@ -1,4 +1,11 @@
 .. _`data-preprocess`:
+
+.. include:: _data-preprocess-links.rst
+
+.. role:: small
+
+.. role:: smaller
+
 ======================
 Data preprocessing
 ======================
