@@ -10,6 +10,7 @@ This section contains methods used in planarian manuscript with step-by-step des
     sampling-design
     data-preprocess
     downstream-analysis
+    visualization
     data-availability
     figure-index
 
