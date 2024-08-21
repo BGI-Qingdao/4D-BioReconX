@@ -1,28 +1,22 @@
 .. sidebar:: **Quick index**
-    
-    **Stereo-seq Analysis Workflow**
-    * `SAW <https://github.com/STOmics/SAW>`_ ☀
-    
-    .. rubric:: Image registration
-        :heading-level: 6
-    | :ref:`/tutorials/mirror.rst`
 
-    .. rubric:: Cell boundary detection
-        :heading-level: 6
-    | :ref:`/tutorials/cell-segmente-on-ssDNA.ipynb`
+    Stereo-seq Analysis Workflow
+    - `SAW <https://github.com/STOmics/SAW>`_
 
-    .. rubric:: DNB aggregation
-        :heading-level: 6
-    | `cell aggregation <https://spacipy.readthedocs.io/en/latest/intro/gem_process.html#>`_
+    Image registration
+    - :ref:`/tutorials/mirror.rst`
 
-    .. rubric:: Cell clustering
-        :heading-level: 6
-    | `Seurat integration <https://satijalab.org/seurat/archive/v4.3/integration_introduction>`_
+    Cell boundary detection
+    - :ref:`/tutorials/cell-segmente-on-ssDNA.ipynb`
 
-    .. rubric:: 3D alignment
-        :heading-level: 6
-    | :ref:`/tutorials/seam.rst`
+    DNB aggregation
+    - `cell aggregation <https://spacipy.readthedocs.io/en/latest/intro/gem_process.html#>`_
 
-    .. rubric:: 3D mesh building
-        :heading-level: 6
-    | :ref:`/tutorials/meshgen.rst`
+    Cell clustering
+    - `Seurat integration <https://satijalab.org/seurat/archive/v4.3/integration_introduction>`_
+
+    3D alignment
+    - :ref:`/tutorials/seam.rst`
+
+    3D mesh building
+    - :ref:`/tutorials/meshgen.rst`

@@ -1,34 +1,26 @@
-.. sidebar:: Quick index
-    
-    .. rubric:: SPC clustering
-        :heading-level: 6
-    | `SPC code repository <https://github.com/lskfs/SPC>`_ ☀
-    | :ref:`/tutorials/spc.rst`
-    
-    .. rubric:: Spatial gradient gene profiling
-        :heading-level: 6
-    | :ref:`/tutorials/gene_profiling.rst`
+.. sidebar:: **Quick index**
 
-    .. rubric:: Spatial pattern clustering
-        :heading-level: 6
-    | :ref:`/tutorials/clustering.rst`
+    SPC clustering
+    - `SPC code repository <https://github.com/lskfs/SPC>`_
+    - :ref:`/tutorials/spc.rst`
 
-    .. rubric:: Potential PCGs detection
-        :heading-level: 6
-    | :ref:`/tutorials/mining.rst`
+    Spatial gradient gene profiling
+    - :ref:`/tutorials/gene_profiling.rst`
 
-    .. rubric:: Principal component analysis of PCGs
-        :heading-level: 6
-    | :ref:`/tutorials/pca.rst`
+    Spatial pattern clustering
+    - :ref:`/tutorials/clustering.rst`
 
-    .. rubric:: Cell-cell connection analysis
-        :heading-level: 6
-    | :ref:`/tutorials/CCC.rst`
+    Potential PCGs detection
+    - :ref:`/tutorials/mining.rst`
 
-    .. rubric:: Cell colocation estimation
-        :heading-level: 6
-    | :ref:`/tutorials/CellCellColocation3D.rst`
+    Principal component analysis of PCGs
+    - :ref:`/tutorials/pca.rst`
 
-    .. rubric:: Micro-environment estimation
-        :heading-level: 6
-    | :ref:`/tutorials/calculate-niches-on-coords.ipynb`
+    Cell-cell connection analysis
+    - :ref:`/tutorials/CCC.rst`
+
+    Cell colocation estimation
+    - :ref:`/tutorials/CellCellColocation3D.rst`
+
+    Micro-environment estimation
+    - :ref:`/tutorials/calculate-niches-on-coords.ipynb`
