@@ -3,17 +3,16 @@
 
 ## **4D-BioReconX**: a bioinformatic framework for reconstructing 4D spatial transcriptomics atlas and spatiotemporal analyses+
 
-[Installation](https://4d-bioreconx.readthedocs.io/en/latest/content/00_Installation.html) - 
-[Quick start](https://4d-bioreconx.readthedocs.io/en/latest/Tutorials/index.html) - 
-[Documentation](https://4d-bioreconx.readthedocs.io/en/latest/index.html)
+4D-BioReconX is a scalable and versatile framework designed to construct a comprehensive four-dimensional (4D) spatial transcriptomics atlas of whole animals at single-cell resolution. This approach enables us to track the intricate spatiotemporal dependencies of morphogenetic gradients and regenerative patterning. It runs based on spatial transcriptomics data, such as Stereo-seq (spatial enhanced resolution omics sequencing) data. Notably, we are still working on the improvement of performance and calculation efficiency.
 
-<img src="https://github.com/BGI-Qingdao/4D-BioReconX/blob/main/docs/source/_static/4D-BioReconX_workflow_v1.0.0.jpg" width="100%" height="100%">
+[**Installation**](https://4d-bioreconx.readthedocs.io/en/latest/content/00_Installation.html) **-** 
+[**Quick start**](https://4d-bioreconx.readthedocs.io/en/latest/Tutorials/index.html) **-** 
+[**Documentation**](https://4d-bioreconx.readthedocs.io/en/latest/index.html) **-** 
+[**Manuscript Tutorial**](https://4d-bioreconx.readthedocs.io/en/latest/PlanarianManuscript/index.html)
 
+<img src="docs/source/_static/4D-BioReconX_workflow_v1.0.0.jpg" width="100%" height="100%">
 
 [comment]: <> (![4D-BioReconX]&#40;./docs/source/_static/4D-BioReconX.PNG&#41;)
-
-
-**4D-BioReconX** is a scalable and versatile framework designed to construct a comprehensive four-dimensional (4D) spatial transcriptomics atlas of whole animals at single-cell resolution. This approach enables us to track the intricate spatiotemporal dependencies of morphogenetic gradients and regenerative patterning. It runs based on spatial transcriptomics data, such as Stereo-seq (spatial enhanced resolution omics sequencing) data. Notably, we are still working on the improvement of performance and calculation efficiency.
 
 ## Discussion 
 Please use GitHub [issues](https://github.com/BGI-Qingdao/4D-BioReconX/issues) tracker for reports and discussions of:

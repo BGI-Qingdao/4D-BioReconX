@@ -1,7 +1,8 @@
-.. sidebar:: **Quick index**
+.. sidebar:: Quick index
     
-    **Stereo-seq Analysis Workflow**
-    * `SAW <https://github.com/STOmics/SAW>`_ ☀
+    .. rubric:: Stereo-seq Analysis Workflow
+        :heading-level: 6
+    | `SAW <https://github.com/STOmics/SAW>`_ ☀
     
     .. rubric:: Image registration
         :heading-level: 6
