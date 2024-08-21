@@ -35,6 +35,10 @@
         :heading-level: 6
     | :ref:`/tutorials/calculate-niches-on-coords.ipynb` 
 
+.. role:: small
+
+.. role:: smaller
+
 ======================
 Downstream Analysis
 ======================
