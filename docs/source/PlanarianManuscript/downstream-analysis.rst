@@ -36,7 +36,7 @@ Principal component analysis was applied to the binned expressions of PCGs along
 
 Cell-cell connection analysis
 -----------------------------
-Spatial cell-cell interaction was estimated based on ligand-receptor pairs from WNT, BMP, COLLAGEN and NOTCH pathways in each 3D planarian individual in the context of each SPC cell to its neighbors within five SPC cell layers. Spatial connection network of SPC cells based on their relationships of cell-cell interactions following :ref:`/tutorials/CCC.rst`.
+Spatial cell-cell interaction was estimated based on ligand-receptor pairs from WNT, BMP, COLLAGEN and NOTCH pathways in each 3D planarian individual in the context of each SPC cell to its neighbors within five SPC cell layers. Spatial connection network of SPC cells based on their relationships of cell-cell interactions following :ref:`/tutorials/cell-cell-connection.ipynb`.
 
 Cell colocation estimation
 --------------------------

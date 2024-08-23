@@ -25,8 +25,7 @@
 
 4D-BioReconX
 ========================================================
-a bioinformatic framework for reconstructing 4D spatial transcriptomics atlas and spatiotemporal analyses+
-------------------------------------------------------------------------------------------------------------
+.. rubric:: a bioinformatic framework for reconstructing 4D spatial transcriptomics atlas and spatiotemporal analyses+
 
 **4D-BioReconX** is a scalable and versatile framework designed to construct a comprehensive four-dimensional (4D) spatial transcriptomics atlas of whole animals at single-cell resolution. \
 This approach enables us to track the intricate spatiotemporal dependencies of morphogenetic gradients and regenerative patterning. \
@@ -34,7 +33,8 @@ It runs based on spatial transcriptomics data, such as Stereo-seq (spatial enhan
 Notably, we are still working on the improvement of performance and calculation efficiency.
 
 
-* Get quickly started by browsing `Installation <https://4d-bioreconx.readthedocs.io/en/latest/content/00_Installation.html>`_, `Basic Usage <https://4d-bioreconx.readthedocs.io/en/latest/content/01_Basic_Usage.html>`_ or `Tutorials <https://4d-bioreconx.readthedocs.io/en/latest/Tutorials/index.html>`_.
+* Get quickly started by browsing :ref:`/content/00_Installation.rst`, :ref:`/content/01_Basic_Usage.rst` or :ref:`/tutorials/index.rst`.
+* Use our planarian manuscript workflow by following :ref:`/planarianmanuscript/index.rst`.
 * Open to discuss and provide feedback on `Github <https://github.com/BGI-Qingdao/4D-BioReconX>`_.
 
 

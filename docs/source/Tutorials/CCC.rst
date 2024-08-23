@@ -1,8 +1,7 @@
-.. _`CCC`:
-========================================
-CCC pipeline
-========================================
+Cell connection ==============
 
-CCC pipeline aims to generate spatially resolved ligand-receptors based on SPC.
+This section aims to estimate cell cell interactions in 3D coordinates.
 
-We modified [CellChat](https://github.com/sqjin/CellChat) and [NICHES](https://github.com/msraredon/NICHES) for the 3D database.
+.. nbgallery::
+    
+    cell-cell-connection
