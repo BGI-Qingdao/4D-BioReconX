@@ -1,0 +1,19 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: 4D-BioReconX
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: BGI
+    family-names: Qingdao
+identifiers:
+  - type: url
+    value: 'https://github.com/BGI-Qingdao/4D-BioReconX'
+license: MIT
+commit: Lidong Guo
+version: '0.1'
+date-released: '2026-02-24'
