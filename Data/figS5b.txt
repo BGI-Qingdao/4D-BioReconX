@@ -1,0 +1,13 @@
+Description	LogP
+Cilium Assembly	-8.2
+Selective autophagy	-7.9
+Regulation of PLK1 Activity at G2/M Transition	-4.5
+Neurotransmitter receptors and postsynaptic signal transmission	-4.3
+Neuronal System	-3.8
+neural nucleus development	-3.5
+regulation of calcium ion transmembrane transport	-3.4
+Muscle contraction	-3.2
+response to mechanical stimulus	-3.1
+muscle system process	-2.6
+epithelial cell differentiation	-2.2
+mitotic cell cycle	-2.2

@@ -1,0 +1,7 @@
+Down regulated_gene GO Analysis						
+go.id	go.anno	go.term	go.count	p.value	fold.enrichment	fdr
+GO:0017145	stem cell division	 biological_process	63	1.10885E-16	3.1	1.24885E-14
+GO:0048755	branching morphogenesis of a nerve	 biological_process	13	0.00041895	2.9	0.010784965
+GO:0000117	regulation of transcription involved in G2/M transition of mitotic cell cycle	 biological_process	31	1.38626E-07	2.8	7.44447E-06
+GO:0001731	formation of translation preinitiation complex	 biological_process	85	1.80428E-10	2	1.2505E-08
+GO:0007400	neuroblast fate determination	 biological_process	79	0.000115936	1.5	0.003760501

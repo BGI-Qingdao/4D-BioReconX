@@ -1,0 +1,273 @@
+cell type	counts	timepoint
+DVB epidermal	37	0hpa1
+CNS	34	0hpa1
+ventral body wall progenitor	33	0hpa1
+dorsal epidermal progenitors (late stage)	30	0hpa1
+ventral epidermal	26	0hpa1
+dorsal body wall muscle	25	0hpa1
+CNS progenitor	23	0hpa1
+neck parenchymal progenitor	19	0hpa1
+dorsal epidermal	18	0hpa1
+protonephridia	18	0hpa1
+dorsal epidermal progenitors (early stage)	17	0hpa1
+DVB parenchymal	16	0hpa1
+pharynx	15	0hpa1
+otf+ neurons 1	13	0hpa1
+parapharyngeal parenchymal 1	11	0hpa1
+scattered parenchymal	11	0hpa1
+scattered parenchymal early progenitor	11	0hpa1
+neoblast	10	0hpa1
+ROD	9	0hpa1
+muscle	9	0hpa1
+parapharyngeal parenchymal 2	8	0hpa1
+neck parenchymal	7	0hpa1
+scattered parenchymal late progenitor	7	0hpa1
+otf+ neurons 2	4	0hpa1
+parapharyngeal parenchymal progenitor	3	0hpa1
+goblet cells	3	0hpa1
+phagocytes	3	0hpa1
+gastrovascular cavity progenitor	2	0hpa1
+parapharyngeal parenchymal 4	2	0hpa1
+parapharyngeal parenchymal 3	2	0hpa1
+phagocytes progenitor	1	0hpa1
+cathepsin+ cells	1	0hpa1
+goblet cells progenitor	1	0hpa1
+cathepsin+ cells progenitor	1	0hpa1
+CNS	37	12hpa2
+DVB epidermal	34	12hpa2
+ventral epidermal	32	12hpa2
+ROD	30	12hpa2
+pharynx	28	12hpa2
+dorsal epidermal	25	12hpa2
+dorsal epidermal progenitors (late stage)	25	12hpa2
+dorsal body wall muscle	23	12hpa2
+protonephridia	22	12hpa2
+ventral body wall progenitor	20	12hpa2
+dorsal epidermal progenitors (early stage)	18	12hpa2
+CNS progenitor	16	12hpa2
+neoblast	15	12hpa2
+neck parenchymal progenitor	14	12hpa2
+otf+ neurons 1	14	12hpa2
+scattered parenchymal	11	12hpa2
+DVB parenchymal	9	12hpa2
+muscle	8	12hpa2
+parapharyngeal parenchymal 2	7	12hpa2
+scattered parenchymal late progenitor	6	12hpa2
+parapharyngeal parenchymal progenitor	6	12hpa2
+neck parenchymal	6	12hpa2
+scattered parenchymal early progenitor	5	12hpa2
+otf+ neurons 2	5	12hpa2
+parapharyngeal parenchymal 1	4	12hpa2
+parapharyngeal parenchymal 3	4	12hpa2
+parapharyngeal parenchymal 4	2	12hpa2
+cathepsin+ cells progenitor	2	12hpa2
+cathepsin+ cells	2	12hpa2
+gastrovascular cavity progenitor	2	12hpa2
+goblet cells progenitor	2	12hpa2
+goblet cells	1	12hpa2
+phagocytes progenitor	1	12hpa2
+DVB epidermal	36	36hpa2
+ROD	31	36hpa2
+ventral epidermal	30	36hpa2
+CNS	29	36hpa2
+dorsal epidermal progenitors (late stage)	24	36hpa2
+dorsal epidermal	21	36hpa2
+dorsal epidermal progenitors (early stage)	21	36hpa2
+pharynx	20	36hpa2
+protonephridia	20	36hpa2
+parapharyngeal parenchymal progenitor	19	36hpa2
+neck parenchymal progenitor	19	36hpa2
+pharynx pouch	18	36hpa2
+dorsal body wall muscle	17	36hpa2
+parapharyngeal parenchymal 1	17	36hpa2
+CNS progenitor	16	36hpa2
+parapharyngeal parenchymal 2	11	36hpa2
+DVB parenchymal	10	36hpa2
+ventral body wall progenitor	9	36hpa2
+otf+ neurons 1	8	36hpa2
+neoblast	8	36hpa2
+parapharyngeal parenchymal 3	7	36hpa2
+muscle	7	36hpa2
+scattered parenchymal early progenitor	6	36hpa2
+neck parenchymal	6	36hpa2
+scattered parenchymal	5	36hpa2
+phagocytes progenitor	4	36hpa2
+scattered parenchymal late progenitor	4	36hpa2
+parapharyngeal parenchymal 4	4	36hpa2
+cathepsin+ cells progenitor	3	36hpa2
+goblet cells	3	36hpa2
+phagocytes	1	36hpa2
+goblet cells progenitor	1	36hpa2
+gastrovascular cavity progenitor	1	36hpa2
+ROD	40	3dpa2
+ventral epidermal	40	3dpa2
+dorsal epidermal	37	3dpa2
+ventral body wall progenitor	32	3dpa2
+CNS	31	3dpa2
+DVB epidermal	28	3dpa2
+parapharyngeal parenchymal 2	21	3dpa2
+pharynx otf+ neuron	20	3dpa2
+dorsal epidermal progenitors (late stage)	16	3dpa2
+CNS progenitor	15	3dpa2
+neck parenchymal progenitor	15	3dpa2
+parapharyngeal parenchymal progenitor	13	3dpa2
+protonephridia	13	3dpa2
+DVB parenchymal	13	3dpa2
+pharynx	13	3dpa2
+dorsal epidermal progenitors (early stage)	11	3dpa2
+parapharyngeal parenchymal 1	11	3dpa2
+dorsal body wall muscle	9	3dpa2
+pharynx pouch	9	3dpa2
+parapharyngeal parenchymal 4	9	3dpa2
+neck parenchymal	7	3dpa2
+muscle	6	3dpa2
+scattered parenchymal early progenitor	6	3dpa2
+goblet cells	4	3dpa2
+scattered parenchymal	4	3dpa2
+otf+ neurons 1	4	3dpa2
+phagocytes progenitor	4	3dpa2
+neoblast	3	3dpa2
+otf+ neurons 2	3	3dpa2
+cathepsin+ cells	3	3dpa2
+scattered parenchymal late progenitor	3	3dpa2
+parapharyngeal parenchymal 3	1	3dpa2
+cathepsin+ cells progenitor	1	3dpa2
+goblet cells progenitor	1	3dpa2
+gastrovascular cavity progenitor	1	3dpa2
+ROD	43	5dpa1
+DVB epidermal	36	5dpa1
+CNS	32	5dpa1
+dorsal epidermal progenitors (late stage)	27	5dpa1
+CNS progenitor	25	5dpa1
+pharynx otf+ neuron	22	5dpa1
+ventral body wall progenitor	22	5dpa1
+neck parenchymal progenitor	21	5dpa1
+pharynx	19	5dpa1
+ventral epidermal	18	5dpa1
+parapharyngeal parenchymal 2	17	5dpa1
+protonephridia	16	5dpa1
+DVB parenchymal	15	5dpa1
+dorsal body wall muscle	15	5dpa1
+dorsal epidermal	14	5dpa1
+muscle	12	5dpa1
+dorsal epidermal progenitors (early stage)	12	5dpa1
+scattered parenchymal	12	5dpa1
+parapharyngeal parenchymal 1	10	5dpa1
+pharynx pouch	9	5dpa1
+gastrovascular cavity progenitor	7	5dpa1
+phagocytes	7	5dpa1
+neck parenchymal	6	5dpa1
+otf+ neurons 2	4	5dpa1
+scattered parenchymal late progenitor	4	5dpa1
+otf+ neurons 1	4	5dpa1
+parapharyngeal parenchymal 3	4	5dpa1
+parapharyngeal parenchymal progenitor	4	5dpa1
+scattered parenchymal early progenitor	4	5dpa1
+parapharyngeal parenchymal 4	3	5dpa1
+neoblast	3	5dpa1
+goblet cells	3	5dpa1
+goblet cells progenitor	2	5dpa1
+phagocytes progenitor	1	5dpa1
+ROD	41	7dpa2
+DVB epidermal	35	7dpa2
+CNS	28	7dpa2
+pharynx otf+ neuron	27	7dpa2
+ventral epidermal	22	7dpa2
+neck parenchymal progenitor	22	7dpa2
+protonephridia	21	7dpa2
+ventral body wall progenitor	20	7dpa2
+dorsal epidermal	19	7dpa2
+CNS progenitor	17	7dpa2
+neck parenchymal	16	7dpa2
+pharynx	16	7dpa2
+dorsal body wall muscle	15	7dpa2
+neoblast	13	7dpa2
+pharynx pouch	13	7dpa2
+dorsal epidermal progenitors (late stage)	11	7dpa2
+muscle	9	7dpa2
+scattered parenchymal	9	7dpa2
+scattered parenchymal early progenitor	8	7dpa2
+otf+ neurons 2	8	7dpa2
+parapharyngeal parenchymal 1	8	7dpa2
+parapharyngeal parenchymal 2	8	7dpa2
+phagocytes progenitor	7	7dpa2
+scattered parenchymal late progenitor	7	7dpa2
+dorsal epidermal progenitors (early stage)	6	7dpa2
+otf+ neurons 1	5	7dpa2
+DVB parenchymal	5	7dpa2
+cathepsin+ cells	5	7dpa2
+parapharyngeal parenchymal 3	5	7dpa2
+parapharyngeal parenchymal progenitor	4	7dpa2
+gastrovascular cavity progenitor	3	7dpa2
+goblet cells progenitor	3	7dpa2
+cathepsin+ cells progenitor	2	7dpa2
+phagocytes	1	7dpa2
+goblet cells	1	7dpa2
+ROD	41	10dpa1
+DVB epidermal	30	10dpa1
+CNS	29	10dpa1
+dorsal body wall muscle	28	10dpa1
+dorsal epidermal progenitors (early stage)	24	10dpa1
+ventral epidermal	22	10dpa1
+pharynx	22	10dpa1
+dorsal epidermal progenitors (late stage)	20	10dpa1
+CNS progenitor	19	10dpa1
+dorsal epidermal	19	10dpa1
+scattered parenchymal late progenitor	18	10dpa1
+scattered parenchymal	15	10dpa1
+otf+ neurons 2	14	10dpa1
+pharynx pouch	14	10dpa1
+muscle	14	10dpa1
+pharynx otf+ neuron	13	10dpa1
+protonephridia	11	10dpa1
+neoblast	10	10dpa1
+gastrovascular cavity progenitor	10	10dpa1
+DVB parenchymal	9	10dpa1
+ventral body wall progenitor	8	10dpa1
+neck parenchymal progenitor	8	10dpa1
+parapharyngeal parenchymal 2	8	10dpa1
+scattered parenchymal early progenitor	7	10dpa1
+parapharyngeal parenchymal 3	5	10dpa1
+cathepsin+ cells progenitor	5	10dpa1
+neck parenchymal	4	10dpa1
+phagocytes progenitor	4	10dpa1
+phagocytes	4	10dpa1
+parapharyngeal parenchymal 1	3	10dpa1
+otf+ neurons 1	3	10dpa1
+parapharyngeal parenchymal 4	2	10dpa1
+goblet cells	2	10dpa1
+parapharyngeal parenchymal progenitor	1	10dpa1
+goblet cells progenitor	1	10dpa1
+ROD	45	14dpa1
+dorsal epidermal progenitors (early stage)	28	14dpa1
+CNS	26	14dpa1
+CNS progenitor	24	14dpa1
+dorsal body wall muscle	23	14dpa1
+DVB epidermal	21	14dpa1
+pharynx	21	14dpa1
+otf+ neurons 2	20	14dpa1
+parapharyngeal parenchymal 2	20	14dpa1
+ventral body wall progenitor	18	14dpa1
+dorsal epidermal progenitors (late stage)	17	14dpa1
+neck parenchymal	16	14dpa1
+ventral epidermal	16	14dpa1
+parapharyngeal parenchymal 3	15	14dpa1
+neoblast	14	14dpa1
+scattered parenchymal	13	14dpa1
+otf+ neurons 1	12	14dpa1
+neck parenchymal progenitor	12	14dpa1
+DVB parenchymal	11	14dpa1
+gastrovascular cavity progenitor	10	14dpa1
+pharynx pouch	9	14dpa1
+muscle	9	14dpa1
+dorsal epidermal	9	14dpa1
+parapharyngeal parenchymal progenitor	8	14dpa1
+parapharyngeal parenchymal 1	5	14dpa1
+scattered parenchymal early progenitor	5	14dpa1
+goblet cells progenitor	4	14dpa1
+parapharyngeal parenchymal 4	3	14dpa1
+goblet cells	3	14dpa1
+cathepsin+ cells progenitor	3	14dpa1
+phagocytes	2	14dpa1
+cathepsin+ cells	2	14dpa1
+phagocytes progenitor	1	14dpa1

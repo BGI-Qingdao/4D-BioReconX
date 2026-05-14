@@ -1,0 +1,2 @@
+control RNAi	med8 RNAi
+7.50%	4.00%

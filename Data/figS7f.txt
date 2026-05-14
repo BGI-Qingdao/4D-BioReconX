@@ -1,0 +1,7 @@
+type	condition	scaled_value
+epi progenitor	ctr_scaled	1.000000
+mus progenitor	ctr_scaled	1.000000
+neu progenitor	ctr_scaled	1.000000
+epi progenitor	Mediator_RNAi_scaled	0.540905
+mus progenitor	Mediator_RNAi_scaled	0.544582
+neu progenitor	Mediator_RNAi_scaled	0.331368
